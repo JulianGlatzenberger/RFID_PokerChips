@@ -17,7 +17,7 @@ namespace DigitalPokerChips
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new digitalPokerChips());
+            Application.Run(new Form1());
         }
     }
 }
