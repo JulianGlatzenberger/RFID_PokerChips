@@ -36,10 +36,17 @@ namespace DigitalPokerChips
             this.userPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.startPanel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.homePanel.SuspendLayout();
             this.userPanel.SuspendLayout();
+            this.startPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // homePanel
@@ -125,22 +132,59 @@ namespace DigitalPokerChips
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
-            // textBox1
+            // startPanel
             // 
-            this.textBox1.Location = new System.Drawing.Point(269, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 23);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.startPanel.Controls.Add(this.panel2);
+            this.startPanel.Controls.Add(this.panel1);
+            this.startPanel.Controls.Add(this.label3);
+            this.startPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startPanel.Location = new System.Drawing.Point(155, 0);
+            this.startPanel.Name = "startPanel";
+            this.startPanel.Size = new System.Drawing.Size(645, 450);
+            this.startPanel.TabIndex = 1;
             // 
-            // listBox1
+            // label3
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(269, 165);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 94);
-            this.listBox1.TabIndex = 2;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(56, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "StartPanel";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(407, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(407, 239);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(67, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "BuchungsPanel";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(97, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 15);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "TransaktionenPanel";
             // 
             // Form1
             // 
@@ -148,16 +192,20 @@ namespace DigitalPokerChips
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.startPanel);
             this.Controls.Add(this.homePanel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.homePanel.ResumeLayout(false);
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
+            this.startPanel.ResumeLayout(false);
+            this.startPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -170,8 +218,12 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Button transaktionButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Panel startPanel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
 
