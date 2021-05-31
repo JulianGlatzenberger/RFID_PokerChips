@@ -36,6 +36,8 @@ namespace DigitalPokerChips
             this.userPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.homePanel.SuspendLayout();
             this.userPanel.SuspendLayout();
             this.SuspendLayout();
@@ -123,12 +125,31 @@ namespace DigitalPokerChips
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(269, 102);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(239, 23);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(269, 165);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 94);
+            this.listBox1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.homePanel);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -136,6 +157,7 @@ namespace DigitalPokerChips
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -148,6 +170,8 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Button transaktionButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
