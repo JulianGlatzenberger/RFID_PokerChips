@@ -55,7 +55,7 @@ namespace DigitalPokerChips
             // 
             // mainPanel
             // 
-            this.mainPanel.BackgroundImage = global::DigitalPokerChips.Properties.Resources.play_593207_1920;
+            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Controls.Add(this.panel1);
@@ -67,7 +67,7 @@ namespace DigitalPokerChips
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.registerPanel);
             this.panel3.Controls.Add(this.button2);
@@ -76,9 +76,9 @@ namespace DigitalPokerChips
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Location = new System.Drawing.Point(12, 257);
+            this.panel3.Location = new System.Drawing.Point(12, 221);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(360, 181);
+            this.panel3.Size = new System.Drawing.Size(354, 217);
             this.panel3.TabIndex = 9;
             // 
             // registerPanel
@@ -92,7 +92,7 @@ namespace DigitalPokerChips
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(269, 143);
+            this.button2.Location = new System.Drawing.Point(138, 164);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 23);
             this.button2.TabIndex = 8;
@@ -102,31 +102,37 @@ namespace DigitalPokerChips
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 52);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.label6.Location = new System.Drawing.Point(20, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 15);
+            this.label6.Size = new System.Drawing.Size(239, 21);
             this.label6.TabIndex = 5;
             this.label6.Text = "Halte deine Karte an den Scanner";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 96);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.label7.Location = new System.Drawing.Point(20, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 15);
+            this.label7.Size = new System.Drawing.Size(196, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "Gib hier deinen Namen ein";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(20, 70);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(20, 49);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(120, 23);
             this.textBox1.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(188, 143);
+            this.button1.Location = new System.Drawing.Point(20, 164);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -135,26 +141,29 @@ namespace DigitalPokerChips
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(20, 114);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 23);
+            this.textBox2.Size = new System.Drawing.Size(239, 23);
             this.textBox2.TabIndex = 4;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(393, 15);
+            this.panel2.Location = new System.Drawing.Point(385, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(395, 423);
+            this.panel2.Size = new System.Drawing.Size(403, 423);
             this.panel2.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label1.Location = new System.Drawing.Point(73, 202);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(265, 21);
@@ -172,6 +181,7 @@ namespace DigitalPokerChips
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.textBox3);
@@ -180,14 +190,15 @@ namespace DigitalPokerChips
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(12, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(354, 224);
+            this.panel1.Size = new System.Drawing.Size(354, 200);
             this.panel1.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(32, 40);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.label8.Location = new System.Drawing.Point(32, 35);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 21);
             this.label8.TabIndex = 4;
@@ -195,7 +206,9 @@ namespace DigitalPokerChips
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(32, 92);
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Location = new System.Drawing.Point(32, 70);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(275, 23);
             this.textBox3.TabIndex = 3;
@@ -204,7 +217,7 @@ namespace DigitalPokerChips
             // 
             this.button4.BackColor = System.Drawing.Color.Red;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(32, 144);
+            this.button4.Location = new System.Drawing.Point(32, 123);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 40);
             this.button4.TabIndex = 2;
@@ -215,7 +228,7 @@ namespace DigitalPokerChips
             // 
             this.button3.BackColor = System.Drawing.Color.LimeGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(187, 144);
+            this.button3.Location = new System.Drawing.Point(187, 123);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 40);
             this.button3.TabIndex = 1;
@@ -235,8 +248,7 @@ namespace DigitalPokerChips
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::DigitalPokerChips.Properties.Resources.play_593207_1280;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPanel);
             this.Name = "Form1";
