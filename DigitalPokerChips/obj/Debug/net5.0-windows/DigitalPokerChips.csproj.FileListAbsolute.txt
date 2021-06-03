@@ -16,3 +16,4 @@ E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\net5.0-windows
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\net5.0-windows\ref\DigitalPokerChips.dll
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\net5.0-windows\DigitalPokerChips.pdb
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\net5.0-windows\DigitalPokerChips.genruntimeconfig.cache
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\net5.0-windows\DigitalPokerChips.Properties.Resources.resources
