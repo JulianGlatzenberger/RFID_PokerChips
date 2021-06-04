@@ -1,0 +1,5 @@
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.csprojAssemblyReference.cache
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.Form1.resources
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.Properties.Resources.resources
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.csproj.GenerateResource.cache
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.csproj.CoreCompileInputs.cache
