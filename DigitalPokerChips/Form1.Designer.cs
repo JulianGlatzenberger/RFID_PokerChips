@@ -1,4 +1,5 @@
 ﻿
+
 namespace DigitalPokerChips
 {
     partial class Form1
@@ -285,4 +286,5 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Label label1;
     }
 }
+
 

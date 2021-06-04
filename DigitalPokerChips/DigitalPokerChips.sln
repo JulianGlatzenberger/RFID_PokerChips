@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalPokerChips", "DigitalPokerChips.csproj", "{04DD4594-4338-4F82-BE61-E8D7234B51D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalPokerChips", "DigitalPokerChips.csproj", "{B886DF6C-07A9-4F23-8D65-DA196D7DB651}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{04DD4594-4338-4F82-BE61-E8D7234B51D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04DD4594-4338-4F82-BE61-E8D7234B51D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04DD4594-4338-4F82-BE61-E8D7234B51D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04DD4594-4338-4F82-BE61-E8D7234B51D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B886DF6C-07A9-4F23-8D65-DA196D7DB651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B886DF6C-07A9-4F23-8D65-DA196D7DB651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B886DF6C-07A9-4F23-8D65-DA196D7DB651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B886DF6C-07A9-4F23-8D65-DA196D7DB651}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {00A4E795-7670-40D2-B145-E5A2669691B2}
+		SolutionGuid = {E9E70E30-07B0-43B4-AA4A-6B8633FF9775}
 	EndGlobalSection
 EndGlobal
