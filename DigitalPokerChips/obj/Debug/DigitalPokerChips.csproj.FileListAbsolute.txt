@@ -8,3 +8,6 @@ E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerCh
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.exe
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.pdb
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.mainWindow.resources
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\bin\Debug\de\DigitalPokerChips.resources.dll
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.mainWindow.de.resources
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\de\DigitalPokerChips.resources.dll

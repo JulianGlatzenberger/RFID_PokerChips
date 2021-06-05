@@ -18,8 +18,8 @@ namespace DigitalPokerChips
 
         public mainWindow()
         {
-
             InitializeComponent();
+            chipIdBox.Select();
 
             //Datenbank Verbindung erstellen      
             string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
@@ -54,9 +54,37 @@ namespace DigitalPokerChips
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void registrierButton_Click(object sender, EventArgs e)
+        {
+            //if(uid || name == null) error
+            string uid = uidTextbox.Text;
+            string name = nameTextbox.Text;
+            int chipAnzahl = 2950;
+            string query = String.Format("INSERT INTO chipTable (Chip_ID, Chip_Anzahl, Name)VALUES ('{0}', '{1}', '{2}');", uid, chipAnzahl, name);
+
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.CommandType = query;
+
+            sqlConnection.Open();
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+
+
+
+        }
+
+        private void ausleseButton_Click(object sender, EventArgs e)
         {
             showChips();
         }
+
+        private void abbrechenButton_Click(object sender, EventArgs e)
+        {
+            uidTextbox.Clear();
+            nameTextbox.Clear();
+        }
+
+        
     }
 }
