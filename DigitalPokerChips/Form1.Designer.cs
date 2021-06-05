@@ -31,6 +31,7 @@ namespace DigitalPokerChips
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.ausleseButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.chipIdBox = new System.Windows.Forms.TextBox();
             this.standLable = new System.Windows.Forms.Label();
@@ -52,12 +53,13 @@ namespace DigitalPokerChips
             this.abbuchButton = new System.Windows.Forms.Button();
             this.aufbuchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.ausleseButton = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -76,24 +78,37 @@ namespace DigitalPokerChips
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.ausleseButton);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.chipIdBox);
-            this.panel4.Controls.Add(this.standLable);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(10, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(304, 276);
+            this.panel4.Size = new System.Drawing.Size(304, 216);
             this.panel4.TabIndex = 10;
+            // 
+            // ausleseButton
+            // 
+            this.ausleseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.ausleseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ausleseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.ausleseButton.Location = new System.Drawing.Point(185, 70);
+            this.ausleseButton.Name = "ausleseButton";
+            this.ausleseButton.Size = new System.Drawing.Size(75, 24);
+            this.ausleseButton.TabIndex = 8;
+            this.ausleseButton.Text = "Auslesen";
+            this.ausleseButton.UseVisualStyleBackColor = false;
+            this.ausleseButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label9.Location = new System.Drawing.Point(21, 33);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(239, 21);
+            this.label9.Size = new System.Drawing.Size(249, 20);
             this.label9.TabIndex = 7;
             this.label9.Text = "Halte deine Karte an den Scanner";
             // 
@@ -101,18 +116,19 @@ namespace DigitalPokerChips
             // 
             this.chipIdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.chipIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chipIdBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chipIdBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.chipIdBox.Location = new System.Drawing.Point(25, 70);
             this.chipIdBox.Name = "chipIdBox";
-            this.chipIdBox.Size = new System.Drawing.Size(103, 20);
+            this.chipIdBox.Size = new System.Drawing.Size(130, 24);
             this.chipIdBox.TabIndex = 6;
-            this.chipIdBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // standLable
             // 
             this.standLable.AutoSize = true;
             this.standLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.standLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.standLable.Location = new System.Drawing.Point(50, 126);
+            this.standLable.Location = new System.Drawing.Point(3, 0);
             this.standLable.Name = "standLable";
             this.standLable.Size = new System.Drawing.Size(182, 20);
             this.standLable.TabIndex = 1;
@@ -164,22 +180,22 @@ namespace DigitalPokerChips
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label6.Location = new System.Drawing.Point(17, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(239, 21);
+            this.label6.Size = new System.Drawing.Size(249, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Halte deine Karte an den Scanner";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label7.Location = new System.Drawing.Point(17, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(196, 21);
+            this.label7.Size = new System.Drawing.Size(196, 20);
             this.label7.TabIndex = 6;
             this.label7.Text = "Gib hier deinen Namen ein";
             // 
@@ -224,11 +240,11 @@ namespace DigitalPokerChips
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label1.Location = new System.Drawing.Point(70, 253);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 21);
+            this.label1.Size = new System.Drawing.Size(271, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Noch keine vergangenen Buchungen";
             // 
@@ -258,11 +274,11 @@ namespace DigitalPokerChips
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label8.Location = new System.Drawing.Point(25, 30);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 21);
+            this.label8.Size = new System.Drawing.Size(169, 20);
             this.label8.TabIndex = 4;
             this.label8.Text = "Geb deinen Betrag ein";
             // 
@@ -306,15 +322,14 @@ namespace DigitalPokerChips
             this.label4.TabIndex = 0;
             this.label4.Text = "BuchungsPanel";
             // 
-            // ausleseButton
+            // panel5
             // 
-            this.ausleseButton.Location = new System.Drawing.Point(185, 70);
-            this.ausleseButton.Name = "ausleseButton";
-            this.ausleseButton.Size = new System.Drawing.Size(75, 20);
-            this.ausleseButton.TabIndex = 8;
-            this.ausleseButton.Text = "Auslesen";
-            this.ausleseButton.UseVisualStyleBackColor = true;
-            this.ausleseButton.Click += new System.EventHandler(this.button1_Click);
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.standLable);
+            this.panel5.Location = new System.Drawing.Point(25, 147);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(214, 24);
+            this.panel5.TabIndex = 9;
             // 
             // mainWindow
             // 
@@ -334,6 +349,8 @@ namespace DigitalPokerChips
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -364,6 +381,7 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Label standLable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ausleseButton;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

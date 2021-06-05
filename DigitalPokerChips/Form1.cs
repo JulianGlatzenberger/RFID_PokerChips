@@ -24,7 +24,7 @@ namespace DigitalPokerChips
             //Datenbank Verbindung erstellen      
             string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
             sqlConnection = new SqlConnection(connectionString);
-            sqlConnection.Open();
+            
 
 
 
@@ -32,28 +32,26 @@ namespace DigitalPokerChips
 
         public void showChips()
         {
+            string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
+            sqlConnection = new SqlConnection(connectionString);
+
             string chipID = chipIdBox.Text;
-            string query = "SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '3765171';";
+            string query = String.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';", chipID);
             using (sqlConnection)
             {
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
                 sqlCommand.CommandText = query;
+                sqlConnection.Open();
 
                 SqlDataReader dataReader = sqlCommand.ExecuteReader();
-
+                
                 while(dataReader.Read())
                 {
-                   ;
                     standLable.Text = String.Format("Du hast aktuell {0} Chips", (dataReader.GetInt32(0)));
-                    //MessageBox.Show("Du hast aktuell {0} Chips!",(dataReader.GetInt32(0)).ToString());
                 }
                 dataReader.Close();
+                sqlConnection.Close();
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
