@@ -15,14 +15,12 @@ namespace DigitalPokerChips
     public partial class mainWindow : Form
     {
         SqlConnection sqlConnection;
-
+        string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
         public mainWindow()
         {
             InitializeComponent();
             chipIdBox.Select();
-
-            //Datenbank Verbindung erstellen      
-            string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
+     
             sqlConnection = new SqlConnection(connectionString);
             
 
@@ -56,22 +54,32 @@ namespace DigitalPokerChips
 
         private void registrierButton_Click(object sender, EventArgs e)
         {
-            //if(uid || name == null) error
+            //if(uid || name == null) erro
             string uid = uidTextbox.Text;
             string name = nameTextbox.Text;
             int chipAnzahl = 2950;
             string query = String.Format("INSERT INTO chipTable (Chip_ID, Chip_Anzahl, Name)VALUES ('{0}', '{1}', '{2}');", uid, chipAnzahl, name);
 
-            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-            sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandType = query;
+            if(string.IsNullOrWhiteSpace(uid) || string.IsNullOrWhiteSpace(name) )
+            {
+               MessageBox.Show("Keines der Felder darf leer sein!");
+            }
+            else
+            {
+                try
+                {
+                    sqlConnection = new SqlConnection(connectionString);
+                    SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
 
-            sqlConnection.Open();
-            sqlCommand.ExecuteNonQuery();
-            sqlConnection.Close();
-
-
-
+                    sqlConnection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    sqlConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            } 
         }
 
         private void ausleseButton_Click(object sender, EventArgs e)
