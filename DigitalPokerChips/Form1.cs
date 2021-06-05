@@ -16,10 +16,5 @@ namespace DigitalPokerChips
         {
             InitializeComponent();
         }
-
-        private void aufbuchButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
