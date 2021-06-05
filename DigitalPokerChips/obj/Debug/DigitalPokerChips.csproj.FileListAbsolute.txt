@@ -7,4 +7,4 @@ E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerCh
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.csproj.CoreCompileInputs.cache
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.exe
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.pdb
-E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.Form1.resources
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.mainWindow.resources
