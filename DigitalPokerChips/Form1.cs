@@ -28,7 +28,7 @@ namespace DigitalPokerChips
 
         }
 
-        public void showChips()
+        public void showChips() //TODO: Try Catch
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
             sqlConnection = new SqlConnection(connectionString);
@@ -52,7 +52,7 @@ namespace DigitalPokerChips
             }
         }
 
-        private void registrierButton_Click(object sender, EventArgs e)
+        public void registerChip()
         {
             //if(uid || name == null) erro
             string uid = uidTextbox.Text;
@@ -60,9 +60,9 @@ namespace DigitalPokerChips
             int chipAnzahl = 2950;
             string query = String.Format("INSERT INTO chipTable (Chip_ID, Chip_Anzahl, Name)VALUES ('{0}', '{1}', '{2}');", uid, chipAnzahl, name);
 
-            if(string.IsNullOrWhiteSpace(uid) || string.IsNullOrWhiteSpace(name) )
+            if (string.IsNullOrWhiteSpace(uid) || string.IsNullOrWhiteSpace(name))
             {
-               MessageBox.Show("Keines der Felder darf leer sein!");
+                MessageBox.Show("Keines der Felder darf leer sein!");
             }
             else
             {
@@ -79,7 +79,38 @@ namespace DigitalPokerChips
                 {
                     MessageBox.Show(ex.ToString());
                 }
-            } 
+            }
+        }
+
+        private void bookOnChip(string query)
+        {
+
+            string betrag = betragTextbox.Text;
+            string uid = chipIdBox.Text;
+
+            try
+            {
+                sqlConnection = new SqlConnection(connectionString);
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+                sqlConnection.Close();
+            }
+
+            catch (Exception E)
+            {
+
+                MessageBox.Show(E.ToString()) ;
+            }
+            
+            showChips();
+            //addTransaktion()
+        }
+
+        private void registrierButton_Click(object sender, EventArgs e)
+        {
+            registerChip();
         }
 
         private void ausleseButton_Click(object sender, EventArgs e)
@@ -93,6 +124,16 @@ namespace DigitalPokerChips
             nameTextbox.Clear();
         }
 
-        
+        private void aufbuchButton_Click(object sender, EventArgs e)
+        {
+            string query = "";
+            bookOnChip(query);
+        }
+
+        private void abbuchButton_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE chipTableSET Chip_Anzahl = '2677'WHERE Chip_ID = '5011720'; ";
+            bookOnChip(query);
+        }
     }
 }

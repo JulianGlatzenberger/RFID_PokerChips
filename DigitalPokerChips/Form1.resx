@@ -132,8 +132,9 @@
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -141,7 +142,6 @@
   <data name="&gt;&gt;label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -155,6 +155,9 @@
   <data name="&gt;&gt;mainPanel.Name" xml:space="preserve">
     <value>mainPanel</value>
   </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
   <data name="&gt;&gt;registrierButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -163,9 +166,6 @@
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;standLable.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -195,6 +195,12 @@
   <data name="standLable.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
@@ -210,14 +216,11 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="registrierButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;chipIdBox.Name" xml:space="preserve">
     <value>chipIdBox</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;chipIdBox.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -243,8 +246,8 @@
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
-  <data name="abbuchButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 92</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;registerPanel.Parent" xml:space="preserve">
     <value>panel3</value>
@@ -272,6 +275,9 @@
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 13</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 168</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>305, 260</value>
@@ -306,9 +312,6 @@
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
   <data name="nameTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 118</value>
   </data>
@@ -317,9 +320,6 @@
   </data>
   <data name="&gt;&gt;uidTextbox.Name" xml:space="preserve">
     <value>uidTextbox</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>panel3</value>
   </data>
   <data name="&gt;&gt;abbuchButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -330,14 +330,11 @@
   <data name="label6.Text" xml:space="preserve">
     <value>Halte deine Karte an den Scanner</value>
   </data>
+  <data name="standLable.Text" xml:space="preserve">
+    <value>Du hast aktuell --- Chips!</value>
+  </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Geb deinen Betrag ein</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>panel4</value>
   </data>
   <data name="abbrechenButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -387,9 +384,6 @@
   <data name="mainPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>649, 443</value>
   </data>
-  <data name="nameTextbox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="betragTextbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 20</value>
   </data>
@@ -414,20 +408,23 @@
   <data name="standLable.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="abbrechenButton.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
   <data name="&gt;&gt;aufbuchButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="&gt;&gt;abbrechenButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="mainPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="abbuchButton.Text" xml:space="preserve">
+    <value>- Buchen</value>
   </data>
   <data name="&gt;&gt;panel4.Name" xml:space="preserve">
     <value>panel4</value>
+  </data>
+  <data name="registrierButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="&gt;&gt;aufbuchButton.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -447,9 +444,6 @@
   <data name="aufbuchButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 92</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>panel4</value>
   </data>
@@ -458,9 +452,6 @@
   </data>
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -483,6 +474,9 @@
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="abbuchButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 92</value>
+  </data>
   <data name="&gt;&gt;label8.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
@@ -501,8 +495,11 @@
   <data name="standLable.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 95</value>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Gib hier deinen Namen ein</value>
@@ -537,17 +534,20 @@
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;standLable.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="registerPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;standLable.Name" xml:space="preserve">
     <value>standLable</value>
   </data>
   <data name="nameTextbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>240, 24</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>649, 443</value>
   </data>
   <data name="&gt;&gt;registerPanel.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -570,8 +570,8 @@
   <data name="betragTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 54</value>
   </data>
-  <data name="mainPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>panel3</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -585,8 +585,8 @@
   <data name="&gt;&gt;label6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="abbuchButton.Text" xml:space="preserve">
-    <value>- Buchen</value>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -606,11 +606,11 @@
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>304, 190</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 168</value>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>mainPanel</value>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 95</value>
   </data>
   <data name="&gt;&gt;aufbuchButton.Name" xml:space="preserve">
     <value>aufbuchButton</value>
@@ -627,8 +627,8 @@
   <data name="&gt;&gt;abbuchButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="registerPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="nameTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 20</value>
@@ -642,8 +642,8 @@
   <data name="&gt;&gt;abbrechenButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="standLable.Text" xml:space="preserve">
-    <value>Du hast aktuell --- Chips!</value>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;betragTextbox.Name" xml:space="preserve">
     <value>betragTextbox</value>
@@ -659,6 +659,9 @@
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 20</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="mainPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -678,14 +681,17 @@
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="ausleseButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 1</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>649, 443</value>
+  <data name="abbrechenButton.Text" xml:space="preserve">
+    <value>Abbrechen</value>
   </data>
   <data name="&gt;&gt;label8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -693,17 +699,14 @@
   <data name="chipIdBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
   <data name="&gt;&gt;chipIdBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;abbrechenButton.Parent" xml:space="preserve">
     <value>panel3</value>
@@ -711,17 +714,14 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="uidTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 50</value>
   </data>
   <data name="&gt;&gt;abbrechenButton.Name" xml:space="preserve">
     <value>abbrechenButton</value>
   </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="abbrechenButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 24</value>
@@ -741,8 +741,8 @@
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="ausleseButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="&gt;&gt;standLable.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 116</value>
@@ -756,7 +756,7 @@
   <data name="&gt;&gt;registrierButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label4.Text" xml:space="preserve">

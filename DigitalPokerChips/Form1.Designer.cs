@@ -227,6 +227,7 @@ namespace DigitalPokerChips
             this.abbuchButton.BackColor = System.Drawing.Color.Red;
             this.abbuchButton.Name = "abbuchButton";
             this.abbuchButton.UseVisualStyleBackColor = false;
+            this.abbuchButton.Click += new System.EventHandler(this.abbuchButton_Click);
             // 
             // aufbuchButton
             // 
@@ -234,6 +235,7 @@ namespace DigitalPokerChips
             this.aufbuchButton.BackColor = System.Drawing.Color.LimeGreen;
             this.aufbuchButton.Name = "aufbuchButton";
             this.aufbuchButton.UseVisualStyleBackColor = false;
+            this.aufbuchButton.Click += new System.EventHandler(this.aufbuchButton_Click);
             // 
             // label4
             // 
