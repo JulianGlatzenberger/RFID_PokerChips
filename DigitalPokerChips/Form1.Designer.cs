@@ -54,6 +54,7 @@ namespace DigitalPokerChips
             this.abbuchButton = new System.Windows.Forms.Button();
             this.aufbuchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,23 +64,23 @@ namespace DigitalPokerChips
             // 
             // mainPanel
             // 
-            resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Controls.Add(this.panel4);
             this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Controls.Add(this.panel1);
+            resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel4.Controls.Add(this.standLable);
             this.panel4.Controls.Add(this.ausleseButton);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.chipIdBox);
             this.panel4.Controls.Add(this.label2);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // standLable
@@ -90,8 +91,8 @@ namespace DigitalPokerChips
             // 
             // ausleseButton
             // 
-            resources.ApplyResources(this.ausleseButton, "ausleseButton");
             this.ausleseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.ausleseButton, "ausleseButton");
             this.ausleseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.ausleseButton.Name = "ausleseButton";
             this.ausleseButton.UseVisualStyleBackColor = false;
@@ -105,9 +106,9 @@ namespace DigitalPokerChips
             // 
             // chipIdBox
             // 
-            resources.ApplyResources(this.chipIdBox, "chipIdBox");
             this.chipIdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.chipIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.chipIdBox, "chipIdBox");
             this.chipIdBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.chipIdBox.Name = "chipIdBox";
             // 
@@ -118,7 +119,6 @@ namespace DigitalPokerChips
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel3.Controls.Add(this.registerPanel);
             this.panel3.Controls.Add(this.registrierButton);
@@ -127,6 +127,7 @@ namespace DigitalPokerChips
             this.panel3.Controls.Add(this.uidTextbox);
             this.panel3.Controls.Add(this.abbrechenButton);
             this.panel3.Controls.Add(this.nameTextbox);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // registerPanel
@@ -156,9 +157,9 @@ namespace DigitalPokerChips
             // 
             // uidTextbox
             // 
-            resources.ApplyResources(this.uidTextbox, "uidTextbox");
             this.uidTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.uidTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.uidTextbox, "uidTextbox");
             this.uidTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.uidTextbox.Name = "uidTextbox";
             // 
@@ -172,18 +173,19 @@ namespace DigitalPokerChips
             // 
             // nameTextbox
             // 
-            resources.ApplyResources(this.nameTextbox, "nameTextbox");
             this.nameTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.nameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.nameTextbox, "nameTextbox");
             this.nameTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.nameTextbox.Name = "nameTextbox";
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label5);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // label1
@@ -199,13 +201,13 @@ namespace DigitalPokerChips
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.betragTextbox);
             this.panel1.Controls.Add(this.abbuchButton);
             this.panel1.Controls.Add(this.aufbuchButton);
             this.panel1.Controls.Add(this.label4);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // label8
@@ -216,23 +218,24 @@ namespace DigitalPokerChips
             // 
             // betragTextbox
             // 
-            resources.ApplyResources(this.betragTextbox, "betragTextbox");
             this.betragTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.betragTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.betragTextbox, "betragTextbox");
             this.betragTextbox.Name = "betragTextbox";
+            this.betragTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.betragTextbox_KeyPress);
             // 
             // abbuchButton
             // 
-            resources.ApplyResources(this.abbuchButton, "abbuchButton");
             this.abbuchButton.BackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.abbuchButton, "abbuchButton");
             this.abbuchButton.Name = "abbuchButton";
             this.abbuchButton.UseVisualStyleBackColor = false;
             this.abbuchButton.Click += new System.EventHandler(this.abbuchButton_Click);
             // 
             // aufbuchButton
             // 
-            resources.ApplyResources(this.aufbuchButton, "aufbuchButton");
             this.aufbuchButton.BackColor = System.Drawing.Color.LimeGreen;
+            resources.ApplyResources(this.aufbuchButton, "aufbuchButton");
             this.aufbuchButton.Name = "aufbuchButton";
             this.aufbuchButton.UseVisualStyleBackColor = false;
             this.aufbuchButton.Click += new System.EventHandler(this.aufbuchButton_Click);
@@ -242,12 +245,17 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
             // mainWindow
             // 
             this.AcceptButton = this.ausleseButton;
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.mainPanel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -291,6 +299,7 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Label standLable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ausleseButton;
+        private System.Windows.Forms.Label label3;
     }
 }
 

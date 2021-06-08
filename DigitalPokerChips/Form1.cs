@@ -42,8 +42,8 @@ namespace DigitalPokerChips
                 sqlConnection.Open();
 
                 SqlDataReader dataReader = sqlCommand.ExecuteReader();
-                
-                while(dataReader.Read())
+
+                while (dataReader.Read())
                 {
                     standLable.Text = String.Format("Du hast aktuell {0} Chips", (dataReader.GetInt32(0)));
                 }
@@ -84,10 +84,6 @@ namespace DigitalPokerChips
 
         private void bookOnChip(string query)
         {
-
-            string betrag = betragTextbox.Text;
-            string uid = chipIdBox.Text;
-
             try
             {
                 sqlConnection = new SqlConnection(connectionString);
@@ -124,16 +120,62 @@ namespace DigitalPokerChips
             nameTextbox.Clear();
         }
 
-        private void aufbuchButton_Click(object sender, EventArgs e)
+        public void aufbuchButton_Click(object sender, EventArgs e)
         {
-            string query = "";
+            int neuezahl;
+            int anzahl;
+            int betragInt;
+            string uid = uidTextbox.Text;
+            string betrag = betragTextbox.Text;
+            string query;
+            string query1 = string.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';" ,uid);
+
+            //Auslesen der Chips:
+            try
+            {
+                sqlConnection = new SqlConnection(connectionString);
+                SqlCommand sqlCmd = new SqlCommand(query1, sqlConnection);
+                sqlCmd.CommandText = query1;
+
+                sqlConnection.Open();
+                SqlDataReader dataReader = sqlCmd.ExecuteReader();
+
+                while(dataReader.Read())
+                {
+                    anzahl = dataReader.GetInt32(0);
+                }
+
+                dataReader.Close();
+                sqlConnection.Close();
+            }
+           
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+            
+
+            betragInt = Int32.Parse(betrag);
+            neuezahl = anzahl + betragInt;
+            query = "";
+
+
             bookOnChip(query);
         }
-
+        
+        
         private void abbuchButton_Click(object sender, EventArgs e)
         {
-            string query = "UPDATE chipTableSET Chip_Anzahl = '2677'WHERE Chip_ID = '5011720'; ";
-            bookOnChip(query);
+            //string query = "UPDATE chipTableSET Chip_Anzahl = '2677'WHERE Chip_ID = '5011720'; ";
+            //bookOnChip(query);
+        }
+
+        private void betragTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
