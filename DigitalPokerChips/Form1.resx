@@ -222,6 +222,9 @@
   <data name="chipIdBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="chipIdBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;chipIdBox.Name" xml:space="preserve">
     <value>chipIdBox</value>
   </data>
@@ -410,6 +413,9 @@
   </data>
   <data name="uidTextbox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="uidTextbox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;uidTextbox.Name" xml:space="preserve">
     <value>uidTextbox</value>
@@ -641,6 +647,9 @@
   </data>
   <data name="betragTextbox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="betragTextbox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;betragTextbox.Name" xml:space="preserve">
     <value>betragTextbox</value>

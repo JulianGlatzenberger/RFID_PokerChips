@@ -46,6 +46,7 @@ namespace DigitalPokerChips
             this.abbrechenButton = new System.Windows.Forms.Button();
             this.nameTextbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@ namespace DigitalPokerChips
             this.abbuchButton = new System.Windows.Forms.Button();
             this.aufbuchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -178,6 +178,7 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.nameTextbox, "nameTextbox");
             this.nameTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.UseWaitCursor = true;
             // 
             // panel2
             // 
@@ -187,6 +188,11 @@ namespace DigitalPokerChips
             this.panel2.Controls.Add(this.label5);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // label1
             // 
@@ -220,6 +226,7 @@ namespace DigitalPokerChips
             // 
             this.betragTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.betragTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.betragTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             resources.ApplyResources(this.betragTextbox, "betragTextbox");
             this.betragTextbox.Name = "betragTextbox";
             this.betragTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.betragTextbox_KeyPress);
@@ -244,11 +251,6 @@ namespace DigitalPokerChips
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
             // 
             // mainWindow
             // 
