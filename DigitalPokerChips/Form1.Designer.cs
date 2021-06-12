@@ -46,7 +46,6 @@ namespace DigitalPokerChips
             this.abbrechenButton = new System.Windows.Forms.Button();
             this.nameTextbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -178,21 +177,14 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.nameTextbox, "nameTextbox");
             this.nameTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.nameTextbox.Name = "nameTextbox";
-            this.nameTextbox.UseWaitCursor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label5);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
             // 
             // label1
             // 
@@ -301,7 +293,6 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Label standLable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ausleseButton;
-        private System.Windows.Forms.Label label3;
     }
 }
 
