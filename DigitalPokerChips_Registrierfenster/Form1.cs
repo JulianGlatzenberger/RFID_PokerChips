@@ -25,12 +25,15 @@ namespace DigitalPokerChips_Registrierfenster
             uidTextbox.Select();
         }
 
-        private void registerChip()
+        private void registerChip() // TODO: Nach Ausführung Textbox clear
         {
             string uid = uidTextbox.Text;
             string name = nameTextbox.Text;
             int chipAnzahl = 2950;
-            string query = String.Format("INSERT INTO chipTable (Chip_ID, Chip_Anzahl, Name)VALUES ('{0}', '{1}', '{2}');", uid, chipAnzahl, name);
+            string query = String.Format("IF NOT EXISTS " +
+                "(SELECT 1 FROM chipTable WHERE Chip_ID = {0})" +
+                "BEGIN INSERT INTO chipTable (Chip_ID, Chip_Anzahl, Name) " +
+                "VALUES ('{1}', '{2}', '{3}') END;", uid, uid, chipAnzahl, name);
 
             if (string.IsNullOrWhiteSpace(uid) || string.IsNullOrWhiteSpace(name))
             {
@@ -44,8 +47,11 @@ namespace DigitalPokerChips_Registrierfenster
                     SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
 
                     sqlConnection.Open();
-                    //sqlCommand.ExecuteNonQuery();
+                    sqlCommand.ExecuteNonQuery();
                     sqlConnection.Close();
+
+                    MessageBox.Show(String.Format("Registrierung erfolgreich!" + Environment.NewLine + Environment.NewLine +
+                    "ChipID = {0}" + Environment.NewLine + "Name = {1}", uidTextbox.Text, nameTextbox.Text));
                 }
                 catch (Exception ex)
                 {
@@ -56,17 +62,18 @@ namespace DigitalPokerChips_Registrierfenster
 
         private void registrierButton_Click(object sender, EventArgs e)
         {          
-            registerChip();
-
-            MessageBox.Show(String.Format("Registrierung erfolgreich!" + Environment.NewLine + Environment.NewLine +
-            "ChipID = {0}" + Environment.NewLine + "Name = {1}", uidTextbox.Text, nameTextbox.Text));
-            
+            registerChip();    
         }
 
         private void abbrechenButton_Click(object sender, EventArgs e)
         {
             uidTextbox.Clear();
             nameTextbox.Clear();
+        }
+
+        private void uidTextbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

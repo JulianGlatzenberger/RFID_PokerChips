@@ -114,9 +114,11 @@ namespace DigitalPokerChips_Registrierfenster
             this.uidTextbox.Size = new System.Drawing.Size(103, 24);
             this.uidTextbox.TabIndex = 3;
             this.uidTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.uidTextbox.TextChanged += new System.EventHandler(this.uidTextbox_TextChanged);
             // 
             // abbrechenButton
             // 
+            this.abbrechenButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.abbrechenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.abbrechenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.abbrechenButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
