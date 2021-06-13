@@ -29,7 +29,7 @@ namespace DigitalPokerChips_Registrierfenster
         {
             string uid = uidTextbox.Text;
             string name = nameTextbox.Text;
-            int chipAnzahl = 2950;
+            int chipAnzahl = 5000;
             string query = String.Format("SELECT COUNT(*) FROM chipTable WHERE Chip_ID = '{0}';", uid);
             string query1 = String.Format("IF NOT EXISTS " +
                 "(SELECT 1 FROM chipTable WHERE Chip_ID = {0})" +
@@ -67,13 +67,14 @@ namespace DigitalPokerChips_Registrierfenster
                             }
                             else
                             {
-                                MessageBox.Show("Registrierung nicht erfolgreich!" + Environment.NewLine + Environment.NewLine + "Der Chip wurde bereits Registriert");
+                                MessageBox.Show("Registrierung nicht erfolgreich!" + Environment.NewLine + Environment.NewLine + "Der Chip wurde bereits Registriert.");
                             }
                         }   
                     }
                     
                     uidTextbox.Clear();
                     nameTextbox.Clear();
+                    uidTextbox.Select();
                 }
                 catch (Exception ex)
                 {
