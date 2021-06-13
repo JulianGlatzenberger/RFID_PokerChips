@@ -1,0 +1,32 @@
+Querys:
+
+//Auslesen
+
+SELECT Chip_Anzahl 
+FROM chipTable
+WHERE Chip_ID = '1234';
+
+//Registrieren(basic)
+
+INSERT INTO chipTable 
+(Chip_ID, Chip_Anzahl, Name)
+VALUES ('1234', '5000', 'Michael Huber');
+
+//Registrieren
+
+IF NOT EXISTS 
+(	SELECT 1
+	FROM chipTable
+	WHERE Chip_ID = '3333'
+)
+BEGIN 
+	INSERT INTO chipTable 
+(Chip_ID, Chip_Anzahl, Name)
+VALUES ('1234', '5000', 'Franz Michel')
+END;
+
+//Schreiben(basic)
+
+
+//Schreiben 
+

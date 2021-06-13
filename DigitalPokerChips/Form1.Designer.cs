@@ -37,14 +37,6 @@ namespace DigitalPokerChips
             this.label9 = new System.Windows.Forms.Label();
             this.chipIdBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.registerPanel = new System.Windows.Forms.Label();
-            this.registrierButton = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.uidTextbox = new System.Windows.Forms.TextBox();
-            this.abbrechenButton = new System.Windows.Forms.Button();
-            this.nameTextbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,9 +46,9 @@ namespace DigitalPokerChips
             this.abbuchButton = new System.Windows.Forms.Button();
             this.aufbuchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.transaktionListbox = new System.Windows.Forms.ListBox();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +57,6 @@ namespace DigitalPokerChips
             // 
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Controls.Add(this.panel4);
-            this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Controls.Add(this.panel1);
             resources.ApplyResources(this.mainPanel, "mainPanel");
@@ -116,72 +107,11 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.panel3.Controls.Add(this.registerPanel);
-            this.panel3.Controls.Add(this.registrierButton);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.uidTextbox);
-            this.panel3.Controls.Add(this.abbrechenButton);
-            this.panel3.Controls.Add(this.nameTextbox);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
-            // registerPanel
-            // 
-            resources.ApplyResources(this.registerPanel, "registerPanel");
-            this.registerPanel.Name = "registerPanel";
-            // 
-            // registrierButton
-            // 
-            resources.ApplyResources(this.registrierButton, "registrierButton");
-            this.registrierButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.registrierButton.Name = "registrierButton";
-            this.registrierButton.UseVisualStyleBackColor = true;
-            this.registrierButton.Click += new System.EventHandler(this.registrierButton_Click);
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.label6.Name = "label6";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.label7.Name = "label7";
-            // 
-            // uidTextbox
-            // 
-            this.uidTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.uidTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.uidTextbox, "uidTextbox");
-            this.uidTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.uidTextbox.Name = "uidTextbox";
-            // 
-            // abbrechenButton
-            // 
-            resources.ApplyResources(this.abbrechenButton, "abbrechenButton");
-            this.abbrechenButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.abbrechenButton.Name = "abbrechenButton";
-            this.abbrechenButton.UseVisualStyleBackColor = true;
-            this.abbrechenButton.Click += new System.EventHandler(this.abbrechenButton_Click);
-            // 
-            // nameTextbox
-            // 
-            this.nameTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.nameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.nameTextbox, "nameTextbox");
-            this.nameTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.nameTextbox.Name = "nameTextbox";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.transaktionListbox);
             this.panel2.Controls.Add(this.label5);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
@@ -244,6 +174,15 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
+            // transaktionListbox
+            // 
+            this.transaktionListbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.transaktionListbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transaktionListbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.transaktionListbox.FormattingEnabled = true;
+            resources.ApplyResources(this.transaktionListbox, "transaktionListbox");
+            this.transaktionListbox.Name = "transaktionListbox";
+            // 
             // mainWindow
             // 
             this.AcceptButton = this.ausleseButton;
@@ -257,8 +196,6 @@ namespace DigitalPokerChips
             this.mainPanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -274,18 +211,10 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button registrierButton;
-        private System.Windows.Forms.Button abbrechenButton;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox nameTextbox;
-        private System.Windows.Forms.TextBox uidTextbox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox betragTextbox;
         private System.Windows.Forms.Button abbuchButton;
         private System.Windows.Forms.Button aufbuchButton;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label registerPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label9;
@@ -293,6 +222,7 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Label standLable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ausleseButton;
+        private System.Windows.Forms.ListBox transaktionListbox;
     }
 }
 

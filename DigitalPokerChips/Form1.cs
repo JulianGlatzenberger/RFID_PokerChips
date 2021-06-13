@@ -16,16 +16,13 @@ namespace DigitalPokerChips
     {
         SqlConnection sqlConnection;
         string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
+
         public mainWindow()
         {
             InitializeComponent();
             chipIdBox.Select();
      
             sqlConnection = new SqlConnection(connectionString);
-            
-
-
-
         }
 
         public void showChips() //TODO: Try Catch
@@ -51,36 +48,6 @@ namespace DigitalPokerChips
                 }
                 dataReader.Close();
                 sqlConnection.Close();
-            }
-        }
-
-        public void registerChip()
-        {
-            //if(uid || name == null) erro
-            string uid = uidTextbox.Text;
-            string name = nameTextbox.Text;
-            int chipAnzahl = 2950;
-            string query = String.Format("INSERT INTO chipTable (Chip_ID, Chip_Anzahl, Name)VALUES ('{0}', '{1}', '{2}');", uid, chipAnzahl, name);
-
-            if (string.IsNullOrWhiteSpace(uid) || string.IsNullOrWhiteSpace(name))
-            {
-                MessageBox.Show("Keines der Felder darf leer sein!");
-            }
-            else
-            {
-                try
-                {
-                    sqlConnection = new SqlConnection(connectionString);
-                    SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-
-                    sqlConnection.Open();
-                    sqlCommand.ExecuteNonQuery();
-                    sqlConnection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
             }
         }
 
@@ -182,20 +149,29 @@ namespace DigitalPokerChips
             bookOnChip(query);
         }
 
-        private void registrierButton_Click(object sender, EventArgs e)
+        private void showTransaktion()
         {
-            registerChip();
+            string query = "";
+            try
+            {
+                using(sqlConnection = new SqlConnection(connectionString))
+                {
+                    using(SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    {
+
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Test");
+            }
+            
         }
 
         private void ausleseButton_Click(object sender, EventArgs e)
         {
             showChips();
-        }
-
-        private void abbrechenButton_Click(object sender, EventArgs e)
-        {
-            uidTextbox.Clear();
-            nameTextbox.Clear();
         }
 
         public void aufbuchButton_Click(object sender, EventArgs e)
