@@ -30,7 +30,8 @@ namespace DigitalPokerChips_Registrierfenster
             string uid = uidTextbox.Text;
             string name = nameTextbox.Text;
             int chipAnzahl = 2950;
-            string query = String.Format("IF NOT EXISTS " +
+            string query = String.Format("SELECT COUNT(*) FROM chipTable WHERE Chip_ID = '{0}';", uid);
+            string query1 = String.Format("IF NOT EXISTS " +
                 "(SELECT 1 FROM chipTable WHERE Chip_ID = {0})" +
                 "BEGIN INSERT INTO chipTable (Chip_ID, Chip_Anzahl, Name) " +
                 "VALUES ('{1}', '{2}', '{3}') END;", uid, uid, chipAnzahl, name);
@@ -43,15 +44,36 @@ namespace DigitalPokerChips_Registrierfenster
             {
                 try
                 {
-                    sqlConnection = new SqlConnection(connectionString);
-                    SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                    using(SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
 
-                    sqlConnection.Open();
-                    sqlCommand.ExecuteNonQuery();
-                    sqlConnection.Close();
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {                          
+                            Int32 count = (Int32)command.ExecuteScalar();
+                            connection.Close();
 
-                    MessageBox.Show(String.Format("Registrierung erfolgreich!" + Environment.NewLine + Environment.NewLine +
-                    "ChipID = {0}" + Environment.NewLine + "Name = {1}", uidTextbox.Text, nameTextbox.Text));
+                            if(count == 0)
+                            {
+                                using (SqlCommand command1 = new SqlCommand(query1, connection))
+                                {
+                                    connection.Open();
+                                    command1.ExecuteNonQuery();
+                                    connection.Close();
+
+                                    MessageBox.Show(String.Format("Registrierung erfolgreich!" + Environment.NewLine + Environment.NewLine +
+                                    "ChipID = {0}" + Environment.NewLine + "Name = {1}", uidTextbox.Text, nameTextbox.Text));
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Registrierung nicht erfolgreich!" + Environment.NewLine + Environment.NewLine + "Der Chip wurde bereits Registriert");
+                            }
+                        }   
+                    }
+                    
+                    uidTextbox.Clear();
+                    nameTextbox.Clear();
                 }
                 catch (Exception ex)
                 {

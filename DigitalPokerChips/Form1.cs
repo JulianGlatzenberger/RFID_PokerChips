@@ -37,8 +37,10 @@ namespace DigitalPokerChips
             string query = String.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';", chipID);
             using (sqlConnection)
             {
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-                sqlCommand.CommandText = query;
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection)
+                {
+                    CommandText = query
+                };
                 sqlConnection.Open();
 
                 SqlDataReader dataReader = sqlCommand.ExecuteReader();
