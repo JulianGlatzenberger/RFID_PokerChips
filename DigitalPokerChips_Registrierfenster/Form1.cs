@@ -98,5 +98,13 @@ namespace DigitalPokerChips_Registrierfenster
         {
 
         }
+
+        private void uidTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar == '0')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

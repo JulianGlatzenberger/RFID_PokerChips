@@ -110,11 +110,13 @@ namespace DigitalPokerChips_Registrierfenster
             this.uidTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.uidTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.uidTextbox.Location = new System.Drawing.Point(117, 62);
+            this.uidTextbox.MaxLength = 10;
             this.uidTextbox.Name = "uidTextbox";
             this.uidTextbox.Size = new System.Drawing.Size(103, 24);
             this.uidTextbox.TabIndex = 3;
             this.uidTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.uidTextbox.TextChanged += new System.EventHandler(this.uidTextbox_TextChanged);
+            this.uidTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uidTextbox_KeyPress);
             // 
             // abbrechenButton
             // 
