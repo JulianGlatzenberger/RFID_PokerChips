@@ -39,6 +39,7 @@ namespace DigitalPokerChips
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.transaktionListbox = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@ namespace DigitalPokerChips
             this.abbuchButton = new System.Windows.Forms.Button();
             this.aufbuchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.transaktionListbox = new System.Windows.Forms.ListBox();
+            this.abbrechenButton = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,6 +66,7 @@ namespace DigitalPokerChips
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.panel4.Controls.Add(this.abbrechenButton);
             this.panel4.Controls.Add(this.standLable);
             this.panel4.Controls.Add(this.ausleseButton);
             this.panel4.Controls.Add(this.label9);
@@ -101,6 +103,7 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.chipIdBox, "chipIdBox");
             this.chipIdBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.chipIdBox.Name = "chipIdBox";
+            this.chipIdBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chipIdBox_KeyPress);
             // 
             // label2
             // 
@@ -121,6 +124,15 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label1.Name = "label1";
+            // 
+            // transaktionListbox
+            // 
+            this.transaktionListbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.transaktionListbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.transaktionListbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.transaktionListbox.FormattingEnabled = true;
+            resources.ApplyResources(this.transaktionListbox, "transaktionListbox");
+            this.transaktionListbox.Name = "transaktionListbox";
             // 
             // label5
             // 
@@ -174,20 +186,20 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // transaktionListbox
+            // abbrechenButton
             // 
-            this.transaktionListbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.transaktionListbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.transaktionListbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.transaktionListbox.FormattingEnabled = true;
-            resources.ApplyResources(this.transaktionListbox, "transaktionListbox");
-            this.transaktionListbox.Name = "transaktionListbox";
+            this.abbrechenButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.abbrechenButton, "abbrechenButton");
+            this.abbrechenButton.Name = "abbrechenButton";
+            this.abbrechenButton.UseVisualStyleBackColor = true;
+            this.abbrechenButton.Click += new System.EventHandler(this.abbrechenButton_Click);
             // 
             // mainWindow
             // 
             this.AcceptButton = this.ausleseButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.CancelButton = this.abbrechenButton;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.mainPanel);
             this.MaximizeBox = false;
@@ -223,6 +235,7 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ausleseButton;
         private System.Windows.Forms.ListBox transaktionListbox;
+        private System.Windows.Forms.Button abbrechenButton;
     }
 }
 

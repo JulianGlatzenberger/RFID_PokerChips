@@ -21,34 +21,50 @@ namespace DigitalPokerChips
         {
             InitializeComponent();
             chipIdBox.Select();
-     
+
             sqlConnection = new SqlConnection(connectionString);
         }
 
         public void showChips() //TODO: Try Catch
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
-            sqlConnection = new SqlConnection(connectionString);
-
-            string chipID = chipIdBox.Text;
-            string query = String.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';", chipID);
-            using (sqlConnection)
+            try
             {
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection)
-                {
-                    CommandText = query
-                };
-                sqlConnection.Open();
+                sqlConnection = new SqlConnection(connectionString);
 
-                SqlDataReader dataReader = sqlCommand.ExecuteReader();
-
-                while (dataReader.Read())
+                string chipID = chipIdBox.Text;
+                string query = String.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';", chipID);
+                using (sqlConnection)
                 {
-                    standLable.Text = String.Format("Du hast aktuell {0} Chips", (dataReader.GetInt32(0)));
+                    SqlCommand sqlCommand = new SqlCommand(query, sqlConnection)
+                    {
+                        CommandText = query
+                    };
+                    sqlConnection.Open();
+
+                    SqlDataReader dataReader = sqlCommand.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        standLable.Text = String.Format("Du hast aktuell {0} Chips", (dataReader.GetInt32(0)));
+                    }
+
+                    dataReader.Close();
+                    sqlConnection.Close();
                 }
-                dataReader.Close();
-                sqlConnection.Close();
             }
+            catch (Exception ef)
+            {
+                if(ef is SqlException)
+                {
+                    MessageBox.Show("Chip wurde nicht erkannt oder noch nicht registriert!");
+                }
+                else
+                {
+                    MessageBox.Show(ef.ToString());
+                }
+            }
+                       
+             betragTextbox.Select();          
         }
 
         private void bookOnChip(string query)
@@ -61,19 +77,24 @@ namespace DigitalPokerChips
                 sqlConnection.Open();
                 sqlCommand.ExecuteNonQuery();
                 sqlConnection.Close();
+
+                MessageBox.Show("Buchung erfolgreich!");
             }
 
             catch (Exception E)
             {
 
-                MessageBox.Show(E.ToString()) ;
+                MessageBox.Show(E.ToString());
             }
-            
+
             showChips();
+            betragTextbox.Clear();
+            chipIdBox.Clear();
+            chipIdBox.Select();
             //addTransaktion()
         }
 
-        private void bookquery1()
+        private void bookquery1()   //Addition Query
         {
             int anzahl = 0;
             string uid = chipIdBox.Text;
@@ -81,7 +102,6 @@ namespace DigitalPokerChips
             int betragInt = Int32.Parse(betrag);
             string query1 = string.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';", uid);
 
-            //Auslesen der Chips:
             try
             {
                 sqlConnection = new SqlConnection(connectionString);
@@ -98,6 +118,7 @@ namespace DigitalPokerChips
 
                 dataReader.Close();
                 sqlConnection.Close();
+
             }
 
             catch (Exception E)
@@ -111,7 +132,7 @@ namespace DigitalPokerChips
             bookOnChip(query);
         }
 
-        private void bookquery2()
+        private void bookquery2()   //Subraktion Query
         {
             int anzahl = 0;
             string uid = chipIdBox.Text;
@@ -144,6 +165,13 @@ namespace DigitalPokerChips
             }
 
             int neuezahl = anzahl - betragInt;
+
+            if(neuezahl <= 0)
+            {
+                neuezahl = 0;
+                MessageBox.Show("Du hast deine letzten Chips verloren!");
+            }
+
             string query = string.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", neuezahl, uid);
 
             bookOnChip(query);
@@ -154,9 +182,9 @@ namespace DigitalPokerChips
             string query = "";
             try
             {
-                using(sqlConnection = new SqlConnection(connectionString))
+                using (sqlConnection = new SqlConnection(connectionString))
                 {
-                    using(SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
                     {
 
                     }
@@ -166,22 +194,56 @@ namespace DigitalPokerChips
             {
                 MessageBox.Show("Test");
             }
-            
+
+        }
+
+        private void abbrechen()
+        {
+            chipIdBox.Clear();
+            betragTextbox.Clear();
+            standLable.Text = "Du hast aktuell --- Chips!";
+            chipIdBox.Select();
         }
 
         private void ausleseButton_Click(object sender, EventArgs e)
         {
-            showChips();
+            if (string.IsNullOrWhiteSpace(chipIdBox.Text))
+            {
+                MessageBox.Show("Du musst zuerst deinen Chip scannen!");
+            }
+            else
+            {
+                showChips();
+            }
         }
 
         public void aufbuchButton_Click(object sender, EventArgs e)
         {
-            bookquery1();
+            if (string.IsNullOrWhiteSpace(chipIdBox.Text) || string.IsNullOrWhiteSpace(betragTextbox.Text))
+            {
+                MessageBox.Show("Keines der beiden Felder darf leer sein.");
+            }
+            else
+            {
+                bookquery1();
+            }
         }
-        
+
         private void abbuchButton_Click(object sender, EventArgs e)
         {
-            bookquery2();
+            if (string.IsNullOrWhiteSpace(chipIdBox.Text) || string.IsNullOrWhiteSpace(betragTextbox.Text))
+            {
+                MessageBox.Show("Keines der beiden Felder darf leer sein.");
+            }
+            else
+            {
+                bookquery2();
+            }
+        }
+
+        private void abbrechenButton_Click(object sender, EventArgs e)
+        {
+            abbrechen();
         }
 
         private void betragTextbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -191,5 +253,15 @@ namespace DigitalPokerChips
                 e.Handled = true;
             }
         }
+
+        private void chipIdBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
+        
 }
