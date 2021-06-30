@@ -94,16 +94,24 @@ namespace DigitalPokerChips_Registrierfenster
             nameTextbox.Clear();
         }
 
-        private void uidTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void uidTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar == '0')
             {
                 e.Handled = true;
+            }
+
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                nameTextbox.Select();
+            }
+        }
+
+        private void nameTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                registerChip();
             }
         }
     }

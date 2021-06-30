@@ -115,7 +115,6 @@ namespace DigitalPokerChips_Registrierfenster
             this.uidTextbox.Size = new System.Drawing.Size(103, 24);
             this.uidTextbox.TabIndex = 3;
             this.uidTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.uidTextbox.TextChanged += new System.EventHandler(this.uidTextbox_TextChanged);
             this.uidTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uidTextbox_KeyPress);
             // 
             // abbrechenButton
@@ -143,6 +142,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(240, 24);
             this.nameTextbox.TabIndex = 4;
+            this.nameTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextbox_KeyPress);
             // 
             // Form1
             // 
