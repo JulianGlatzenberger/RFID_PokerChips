@@ -92,6 +92,7 @@ namespace DigitalPokerChips_Registrierfenster
         {
             uidTextbox.Clear();
             nameTextbox.Clear();
+            uidTextbox.Select();
         }
 
         private void uidTextbox_KeyPress(object sender, KeyPressEventArgs e)

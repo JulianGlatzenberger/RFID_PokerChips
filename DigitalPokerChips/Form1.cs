@@ -23,6 +23,12 @@ namespace DigitalPokerChips
             chipIdBox.Select();
 
             sqlConnection = new SqlConnection(connectionString);
+
+            Random random = new Random();
+            int num = random.Next(); //TODO: Random INT in HEX 
+
+
+            MessageBox.Show(num.ToString());
         }
 
         public void showChips() //TODO: Try Catch
@@ -51,20 +57,22 @@ namespace DigitalPokerChips
                     dataReader.Close();
                     sqlConnection.Close();
                 }
+
+                betragTextbox.Select();
             }
             catch (Exception ef)
             {
                 if(ef is SqlException)
                 {
                     MessageBox.Show("Chip wurde nicht erkannt oder noch nicht registriert!");
+                    chipIdBox.Clear();
+                    chipIdBox.Select();
                 }
                 else
                 {
                     MessageBox.Show(ef.ToString());
                 }
-            }
-                       
-             betragTextbox.Select();          
+            }          
         }
 
         private void bookOnChip(string query)
@@ -129,7 +137,10 @@ namespace DigitalPokerChips
             int neuezahl = anzahl + betragInt;
             string query = string.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", neuezahl, uid);
 
+            
+
             bookOnChip(query);
+            showTransaktion(56542, 443);
         }
 
         private void bookquery2()   //Subraktion Query
@@ -177,24 +188,11 @@ namespace DigitalPokerChips
             bookOnChip(query);
         }
 
-        private void showTransaktion()
-        {
-            string query = "";
-            try
-            {
-                using (sqlConnection = new SqlConnection(connectionString))
-                {
-                    using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
-                    {
+        private void showTransaktion(int ChipID, int ChipAnzahl)
+        {         
+            transaktionListbox.Items.AddRange(new object[] { ChipID, ChipAnzahl });
 
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Test");
-            }
-
+            label1.Hide();
         }
 
         private void abbrechen()
