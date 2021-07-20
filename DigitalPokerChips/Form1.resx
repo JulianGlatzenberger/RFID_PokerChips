@@ -235,7 +235,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 169</value>
+    <value>20, 169</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 20</value>
@@ -258,17 +258,68 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="Transaktionsnummer.Text" xml:space="preserve">
+    <value>Buchungsnummer</value>
+  </data>
+  <data name="Transaktionsnummer.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="ChipID.Text" xml:space="preserve">
+    <value>ChipID</value>
+  </data>
+  <data name="ChipID.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="ChipID.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="Uhrzeit.Text" xml:space="preserve">
+    <value>Uhrzeit</value>
+  </data>
+  <data name="Uhrzeit.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="Uhrzeit.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="listView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listView1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 341</value>
+  </data>
+  <data name="listView1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;listView1.Name" xml:space="preserve">
+    <value>listView1</value>
+  </data>
+  <data name="&gt;&gt;listView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="transaktionListbox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="transaktionListbox.ItemHeight" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>16</value>
   </data>
   <data name="transaktionListbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
+    <value>127, 249</value>
   </data>
   <data name="transaktionListbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>301, 300</value>
+    <value>177, 80</value>
   </data>
   <data name="transaktionListbox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -283,7 +334,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;transaktionListbox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -310,7 +361,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 13</value>
@@ -720,11 +771,32 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>649, 366</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;Transaktionsnummer.Name" xml:space="preserve">
+    <value>Transaktionsnummer</value>
+  </data>
+  <data name="&gt;&gt;Transaktionsnummer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChipID.Name" xml:space="preserve">
+    <value>ChipID</value>
+  </data>
+  <data name="&gt;&gt;ChipID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Uhrzeit.Name" xml:space="preserve">
+    <value>Uhrzeit</value>
+  </data>
+  <data name="&gt;&gt;Uhrzeit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>mainWindow</value>

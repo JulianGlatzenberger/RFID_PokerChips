@@ -23,12 +23,6 @@ namespace DigitalPokerChips
             chipIdBox.Select();
 
             sqlConnection = new SqlConnection(connectionString);
-
-            Random random = new Random();
-            int num = random.Next(); //TODO: Random INT in HEX 
-
-
-            MessageBox.Show(num.ToString());
         }
 
         public void showChips() //TODO: Try Catch
@@ -135,12 +129,13 @@ namespace DigitalPokerChips
             }
 
             int neuezahl = anzahl + betragInt;
-            string query = string.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", neuezahl, uid);
+            string Chipanzahl = neuezahl.ToString();
+            string query = string.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", Chipanzahl, uid);
 
-            
-
+          
             bookOnChip(query);
-            showTransaktion(56542, 443);
+            showTransaktion(uid);
+            //resetBook(betragInt, anzahl, uid);
         }
 
         private void bookquery2()   //Subraktion Query
@@ -186,13 +181,32 @@ namespace DigitalPokerChips
             string query = string.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", neuezahl, uid);
 
             bookOnChip(query);
+            showTransaktion(uid);
         }
 
-        private void showTransaktion(int ChipID, int ChipAnzahl)
-        {         
-            transaktionListbox.Items.AddRange(new object[] { ChipID, ChipAnzahl });
+        private void showTransaktion(string ChipID) //String Betrag
+        {
+            Random random = new Random();
+            int num = random.Next(); 
+            string hexString = num.ToString("X");
+
+            DateTime dateTime = DateTime.Now;
+            string date = dateTime.ToString("T");
+ 
+            ListViewItem lvItem = new ListViewItem(hexString);
+
+            lvItem.SubItems.Add(ChipID);
+            lvItem.SubItems.Add(date);
+            //lvItem.SubItems.Add(startAnzahl); // optional: Betrag für bessere Verständlichkeit
+            listView1.Items.Add(lvItem);
 
             label1.Hide();
+        }
+
+        private void resetBook(int betrag, int anzahl, string chipId)
+        {
+            string query = String.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", anzahl, chipId);
+            bookOnChip(query);
         }
 
         private void abbrechen()
@@ -260,6 +274,12 @@ namespace DigitalPokerChips
             }
         }
 
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e) // New Window
+        {
+            string chipID = listView1.Items[0].SubItems[1].Text; // anzahl zu lv hinzufügen -> in methode abgreifen
+            //resetBook(chipID)
+            MessageBox.Show(chipID);
+        }
     }
         
 }
