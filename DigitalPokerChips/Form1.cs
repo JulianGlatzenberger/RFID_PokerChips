@@ -25,7 +25,7 @@ namespace DigitalPokerChips
             sqlConnection = new SqlConnection(connectionString);
         }
 
-        public void showChips() //TODO: Try Catch
+        public void showChips() //Chipanzahl auslesen, in Lable schreiben
         {
             try
             {
@@ -69,7 +69,7 @@ namespace DigitalPokerChips
             }          
         }
 
-        private void bookOnChip(string query)
+        private void bookOnChip(string query)   //Buchungsquery ausführen
         {
             try
             {
@@ -93,10 +93,9 @@ namespace DigitalPokerChips
             betragTextbox.Clear();
             chipIdBox.Clear();
             chipIdBox.Select();
-            //addTransaktion()
         }
 
-        private void bookquery1()   //Addition Query
+        private void bookquery1()   //SQL Query für Aufbuchen
         {
             int anzahl = 0;
             string uid = chipIdBox.Text;
@@ -135,10 +134,9 @@ namespace DigitalPokerChips
           
             bookOnChip(query);
             showTransaktion(uid, betrag, anzahl);
-            //resetBook(betragInt, anzahl, uid);
         }
 
-        private void bookquery2()   //Subraktion Query
+        private void bookquery2()   //SQL Query für Abbuchen
         {
             int anzahl = 0;
             string uid = chipIdBox.Text;
@@ -184,7 +182,7 @@ namespace DigitalPokerChips
             showTransaktion(uid, betrag, anzahl);
         }
 
-        private void showTransaktion(string ChipID, string betrag, int startAnzahl)
+        private void showTransaktion(string ChipID, string betrag, int startAnzahl) //Anzeigen der letzten Buchungen in listView
         {
             Random random = new Random();
             int num = random.Next(); 
@@ -204,13 +202,13 @@ namespace DigitalPokerChips
             label1.Hide();
         }
 
-        private void resetBook(string anzahl, string chipId)
+        private void resetBook(string anzahl, string chipId)    //Ausgewählte Buchung aus listView zurück buchen
         {
             string query = String.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", anzahl, chipId);
             bookOnChip(query);
         }
 
-        private void abbrechen()
+        private void abbrechen()    //Clearen aller Textboxen und Lables
         {
             chipIdBox.Clear();
             betragTextbox.Clear();
@@ -275,7 +273,7 @@ namespace DigitalPokerChips
             }
         }
 
-        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e) // New Window
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             string chipID = listView1.Items[0].SubItems[1].Text; 
             string alteAnzahl = listView1.Items[0].SubItems[3].Text;
@@ -284,6 +282,20 @@ namespace DigitalPokerChips
             chipIdBox.Text = chipID;
             showChips();
         }
-    }
-        
+
+        private void mainWindow_Load(object sender, EventArgs e)  //Tooltips
+        {
+            ToolTip toolTip = new ToolTip();
+
+            toolTip.ShowAlways = true;
+
+            toolTip.SetToolTip(this.chipIdBox, "Eingabe der KartenID");
+            toolTip.SetToolTip(this.betragTextbox, "Eingabe des Betrags");
+            toolTip.SetToolTip(this.aufbuchButton, "Eingegebenen Betrag addieren");
+            toolTip.SetToolTip(this.abbuchButton, "Eingegebenen Betrag subtrahieren");
+            toolTip.SetToolTip(this.listView1, "Hier siehst du alle vergangenen Buchungen");
+            toolTip.SetToolTip(this.ausleseButton, "Auslesen der Anzahl an Chips");
+
+        }
+    }      
 }

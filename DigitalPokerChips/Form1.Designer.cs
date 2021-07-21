@@ -43,6 +43,8 @@ namespace DigitalPokerChips
             this.listView1 = new System.Windows.Forms.ListView();
             this.Transaktionsnummer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ChipID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Buchungsbetrag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Startanzahl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Uhrzeit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -51,8 +53,6 @@ namespace DigitalPokerChips
             this.abbuchButton = new System.Windows.Forms.Button();
             this.aufbuchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.Startanzahl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Buchungsbetrag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -166,6 +166,14 @@ namespace DigitalPokerChips
             // 
             resources.ApplyResources(this.ChipID, "ChipID");
             // 
+            // Buchungsbetrag
+            // 
+            resources.ApplyResources(this.Buchungsbetrag, "Buchungsbetrag");
+            // 
+            // Startanzahl
+            // 
+            resources.ApplyResources(this.Startanzahl, "Startanzahl");
+            // 
             // Uhrzeit
             // 
             resources.ApplyResources(this.Uhrzeit, "Uhrzeit");
@@ -222,14 +230,6 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // Startanzahl
-            // 
-            resources.ApplyResources(this.Startanzahl, "Startanzahl");
-            // 
-            // Buchungsbetrag
-            // 
-            resources.ApplyResources(this.Buchungsbetrag, "Buchungsbetrag");
-            // 
             // mainWindow
             // 
             this.AcceptButton = this.ausleseButton;
@@ -242,6 +242,7 @@ namespace DigitalPokerChips
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "mainWindow";
+            this.Load += new System.EventHandler(this.mainWindow_Load);
             this.mainPanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
