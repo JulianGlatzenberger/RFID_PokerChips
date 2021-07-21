@@ -277,10 +277,14 @@ namespace DigitalPokerChips
         {
             string chipID = listView1.Items[0].SubItems[1].Text; 
             string alteAnzahl = listView1.Items[0].SubItems[3].Text;
-            
-            resetBook(alteAnzahl, chipID);
-            chipIdBox.Text = chipID;
-            showChips();
+
+            DialogResult result = MessageBox.Show("Möchtest du die Buchung rückgangig machen?", "Achtung!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if(result == DialogResult.OK)
+            {
+                resetBook(alteAnzahl, chipID);
+                chipIdBox.Text = chipID;
+                showChips();
+            }
         }
 
         private void mainWindow_Load(object sender, EventArgs e)  //Tooltips
