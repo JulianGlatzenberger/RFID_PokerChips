@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace DigitalPokerChips
 {
-    public partial class mainWindow : Form
+    public partial class mainWindow : Form //Codeoptimierung: Standartzugriff auf Datenbank in Methode
     {
         SqlConnection sqlConnection;
         string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
@@ -134,7 +134,7 @@ namespace DigitalPokerChips
 
           
             bookOnChip(query);
-            showTransaktion(uid);
+            showTransaktion(uid, betrag, anzahl);
             //resetBook(betragInt, anzahl, uid);
         }
 
@@ -181,10 +181,10 @@ namespace DigitalPokerChips
             string query = string.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", neuezahl, uid);
 
             bookOnChip(query);
-            showTransaktion(uid);
+            showTransaktion(uid, betrag, anzahl);
         }
 
-        private void showTransaktion(string ChipID) //String Betrag
+        private void showTransaktion(string ChipID, string betrag, int startAnzahl)
         {
             Random random = new Random();
             int num = random.Next(); 
@@ -196,14 +196,15 @@ namespace DigitalPokerChips
             ListViewItem lvItem = new ListViewItem(hexString);
 
             lvItem.SubItems.Add(ChipID);
+            lvItem.SubItems.Add(betrag);
+            lvItem.SubItems.Add(startAnzahl.ToString());
             lvItem.SubItems.Add(date);
-            //lvItem.SubItems.Add(startAnzahl); // optional: Betrag für bessere Verständlichkeit
             listView1.Items.Add(lvItem);
 
             label1.Hide();
         }
 
-        private void resetBook(int betrag, int anzahl, string chipId)
+        private void resetBook(string anzahl, string chipId)
         {
             string query = String.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", anzahl, chipId);
             bookOnChip(query);
@@ -276,9 +277,12 @@ namespace DigitalPokerChips
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e) // New Window
         {
-            string chipID = listView1.Items[0].SubItems[1].Text; // anzahl zu lv hinzufügen -> in methode abgreifen
-            //resetBook(chipID)
-            MessageBox.Show(chipID);
+            string chipID = listView1.Items[0].SubItems[1].Text; 
+            string alteAnzahl = listView1.Items[0].SubItems[3].Text;
+            
+            resetBook(alteAnzahl, chipID);
+            chipIdBox.Text = chipID;
+            showChips();
         }
     }
         

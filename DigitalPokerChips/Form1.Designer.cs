@@ -40,7 +40,10 @@ namespace DigitalPokerChips
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.transaktionListbox = new System.Windows.Forms.ListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Transaktionsnummer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ChipID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Uhrzeit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,10 +51,8 @@ namespace DigitalPokerChips
             this.abbuchButton = new System.Windows.Forms.Button();
             this.aufbuchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.Transaktionsnummer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ChipID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Uhrzeit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Startanzahl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Buchungsbetrag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,7 +130,6 @@ namespace DigitalPokerChips
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.listView1);
-            this.panel2.Controls.Add(this.transaktionListbox);
             this.panel2.Controls.Add(this.label5);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
@@ -140,14 +140,35 @@ namespace DigitalPokerChips
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label1.Name = "label1";
             // 
-            // transaktionListbox
+            // listView1
             // 
-            this.transaktionListbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.transaktionListbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.transaktionListbox, "transaktionListbox");
-            this.transaktionListbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.transaktionListbox.FormattingEnabled = true;
-            this.transaktionListbox.Name = "transaktionListbox";
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Transaktionsnummer,
+            this.ChipID,
+            this.Buchungsbetrag,
+            this.Startanzahl,
+            this.Uhrzeit});
+            resources.ApplyResources(this.listView1, "listView1");
+            this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.listView1.HideSelection = false;
+            this.listView1.Name = "listView1";
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
+            // 
+            // Transaktionsnummer
+            // 
+            resources.ApplyResources(this.Transaktionsnummer, "Transaktionsnummer");
+            // 
+            // ChipID
+            // 
+            resources.ApplyResources(this.ChipID, "ChipID");
+            // 
+            // Uhrzeit
+            // 
+            resources.ApplyResources(this.Uhrzeit, "Uhrzeit");
             // 
             // label5
             // 
@@ -201,33 +222,13 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // listView1
+            // Startanzahl
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Transaktionsnummer,
-            this.ChipID,
-            this.Uhrzeit});
-            resources.ApplyResources(this.listView1, "listView1");
-            this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.listView1.HideSelection = false;
-            this.listView1.Name = "listView1";
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
+            resources.ApplyResources(this.Startanzahl, "Startanzahl");
             // 
-            // Transaktionsnummer
+            // Buchungsbetrag
             // 
-            resources.ApplyResources(this.Transaktionsnummer, "Transaktionsnummer");
-            // 
-            // ChipID
-            // 
-            resources.ApplyResources(this.ChipID, "ChipID");
-            // 
-            // Uhrzeit
-            // 
-            resources.ApplyResources(this.Uhrzeit, "Uhrzeit");
+            resources.ApplyResources(this.Buchungsbetrag, "Buchungsbetrag");
             // 
             // mainWindow
             // 
@@ -270,12 +271,13 @@ namespace DigitalPokerChips
         private System.Windows.Forms.Label standLable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ausleseButton;
-        private System.Windows.Forms.ListBox transaktionListbox;
         private System.Windows.Forms.Button abbrechenButton;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader Transaktionsnummer;
         private System.Windows.Forms.ColumnHeader ChipID;
         private System.Windows.Forms.ColumnHeader Uhrzeit;
+        private System.Windows.Forms.ColumnHeader Startanzahl;
+        private System.Windows.Forms.ColumnHeader Buchungsbetrag;
     }
 }
 

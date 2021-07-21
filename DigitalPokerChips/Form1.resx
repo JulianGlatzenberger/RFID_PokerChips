@@ -235,7 +235,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 169</value>
+    <value>131, 169</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 20</value>
@@ -273,6 +273,27 @@
   <data name="ChipID.Width" type="System.Int32, mscorlib">
     <value>90</value>
   </data>
+  <data name="Buchungsbetrag.Text" xml:space="preserve">
+    <value>Buchungsbetrag</value>
+  </data>
+  <data name="Buchungsbetrag.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="Buchungsbetrag.Width" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="Startanzahl.DisplayIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Startanzahl.Text" xml:space="preserve">
+    <value>Startanzahl</value>
+  </data>
+  <data name="Startanzahl.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="Startanzahl.Width" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
   <data name="Uhrzeit.Text" xml:space="preserve">
     <value>Uhrzeit</value>
   </data>
@@ -292,7 +313,7 @@
     <value>0, 0</value>
   </data>
   <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 341</value>
+    <value>517, 341</value>
   </data>
   <data name="listView1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -308,33 +329,6 @@
   </data>
   <data name="&gt;&gt;listView1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="transaktionListbox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="transaktionListbox.ItemHeight" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="transaktionListbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 249</value>
-  </data>
-  <data name="transaktionListbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 80</value>
-  </data>
-  <data name="transaktionListbox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;transaktionListbox.Name" xml:space="preserve">
-    <value>transaktionListbox</value>
-  </data>
-  <data name="&gt;&gt;transaktionListbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;transaktionListbox.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;transaktionListbox.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -361,13 +355,13 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 13</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 341</value>
+    <value>517, 341</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -472,7 +466,7 @@
     <value>0, 0</value>
   </data>
   <data name="mainPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 366</value>
+    <value>860, 366</value>
   </data>
   <data name="mainPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -775,7 +769,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>649, 366</value>
+    <value>860, 366</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form1</value>
@@ -796,6 +790,18 @@
     <value>Uhrzeit</value>
   </data>
   <data name="&gt;&gt;Uhrzeit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Startanzahl.Name" xml:space="preserve">
+    <value>Startanzahl</value>
+  </data>
+  <data name="&gt;&gt;Startanzahl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Buchungsbetrag.Name" xml:space="preserve">
+    <value>Buchungsbetrag</value>
+  </data>
+  <data name="&gt;&gt;Buchungsbetrag.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
