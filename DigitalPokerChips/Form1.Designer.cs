@@ -239,8 +239,8 @@ namespace DigitalPokerChips
             this.CancelButton = this.abbrechenButton;
             this.ControlBox = false;
             this.Controls.Add(this.mainPanel);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.HelpButton = true;
             this.Name = "mainWindow";
             this.Load += new System.EventHandler(this.mainWindow_Load);
             this.mainPanel.ResumeLayout(false);
