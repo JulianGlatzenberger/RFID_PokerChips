@@ -237,7 +237,6 @@ namespace DigitalPokerChips
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.CancelButton = this.abbrechenButton;
-            this.ControlBox = false;
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
