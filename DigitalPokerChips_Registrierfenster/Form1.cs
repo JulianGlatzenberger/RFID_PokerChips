@@ -16,7 +16,7 @@ namespace DigitalPokerChips_Registrierfenster
     public partial class Form1 : Form
     {
         SqlConnection sqlConnection;
-        string connectionString = ConfigurationManager.ConnectionStrings["DigitalPokerChips_Registrierfenster.Properties.Settings.PokerChipsConnectionString"].ConnectionString;
+        string connectionString = "Server=192.168.2.119,1433; Database=PokerChips; User Id=SA; Password=Server.123;";
 
         public Form1()
         {

@@ -238,8 +238,6 @@ namespace DigitalPokerChips
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.CancelButton = this.abbrechenButton;
             this.Controls.Add(this.mainPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.HelpButton = true;
             this.Name = "mainWindow";
             this.Load += new System.EventHandler(this.mainWindow_Load);
             this.mainPanel.ResumeLayout(false);

@@ -7,3 +7,4 @@ E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips_Registrierfenster\obj\De
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips_Registrierfenster\obj\Debug\DigitalPokerChips_Registrierfenster.exe
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips_Registrierfenster\obj\Debug\DigitalPokerChips_Registrierfenster.pdb
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips_Registrierfenster\obj\Debug\DigitalPokerChips_Registrierfenster.Form1.resources
+E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips_Registrierfenster\obj\Debug\DigitalPokerChips_Registrierfenster.csproj.AssemblyReference.cache
