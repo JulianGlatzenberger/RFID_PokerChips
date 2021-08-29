@@ -33,12 +33,13 @@ namespace DigitalPokerChips
             this.mainPanel = new System.Windows.Forms.Panel();
             this.abbrechenButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.standLable = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.ausleseButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.chipIdBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.standLable = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Transaktionsnummer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,9 +64,9 @@ namespace DigitalPokerChips
             // 
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Controls.Add(this.abbrechenButton);
-            this.mainPanel.Controls.Add(this.panel4);
             this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Controls.Add(this.panel1);
+            this.mainPanel.Controls.Add(this.panel4);
             resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
             // 
@@ -83,6 +84,7 @@ namespace DigitalPokerChips
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
             this.panel4.Controls.Add(this.standLable);
+            this.panel4.Controls.Add(this.nameLabel);
             this.panel4.Controls.Add(this.ausleseButton);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.chipIdBox);
@@ -90,11 +92,12 @@ namespace DigitalPokerChips
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
-            // standLable
+            // nameLabel
             // 
-            resources.ApplyResources(this.standLable, "standLable");
-            this.standLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.standLable.Name = "standLable";
+            resources.ApplyResources(this.nameLabel, "nameLabel");
+            this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.nameLabel.Name = "nameLabel";
             // 
             // ausleseButton
             // 
@@ -133,6 +136,13 @@ namespace DigitalPokerChips
             this.panel2.Controls.Add(this.label5);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            // 
+            // standLable
+            // 
+            resources.ApplyResources(this.standLable, "standLable");
+            this.standLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.standLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.standLable.Name = "standLable";
             // 
             // label1
             // 
@@ -276,6 +286,7 @@ namespace DigitalPokerChips
         private System.Windows.Forms.ColumnHeader Uhrzeit;
         private System.Windows.Forms.ColumnHeader Startanzahl;
         private System.Windows.Forms.ColumnHeader Buchungsbetrag;
+        private System.Windows.Forms.Label nameLabel;
     }
 }
 

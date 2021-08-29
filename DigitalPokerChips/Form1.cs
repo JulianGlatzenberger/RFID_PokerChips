@@ -32,7 +32,7 @@ namespace DigitalPokerChips
                 sqlConnection = new SqlConnection(connectionString);
 
                 string chipID = chipIdBox.Text;
-                string query = String.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';", chipID);
+                string query = String.Format("SELECT Chip_Anzahl, Name FROM chipTable WHERE Chip_ID = '{0}';", chipID);
                 using (sqlConnection)
                 {
                     SqlCommand sqlCommand = new SqlCommand(query, sqlConnection)
@@ -45,7 +45,8 @@ namespace DigitalPokerChips
 
                     while (dataReader.Read())
                     {
-                        standLable.Text = String.Format("Du hast aktuell {0} Chips", (dataReader.GetInt32(0)));
+                        standLable.Text = String.Format("du hast aktuell {0} Chips", (dataReader.GetInt32(0)));
+                        nameLabel.Text = String.Format("{0},", (dataReader.GetString(1)));
                     }
 
                     dataReader.Close();
@@ -212,7 +213,8 @@ namespace DigitalPokerChips
         {
             chipIdBox.Clear();
             betragTextbox.Clear();
-            standLable.Text = "Du hast aktuell --- Chips!";
+            standLable.Text = "du hast aktuell --- Chips!";
+            nameLabel.ResetText();
             chipIdBox.Select();
         }
 
