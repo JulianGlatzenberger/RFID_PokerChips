@@ -66,7 +66,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(3, 23);
+            this.label6.Location = new System.Drawing.Point(3, 24);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(355, 28);
             this.label6.TabIndex = 5;
@@ -80,7 +80,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(3, 116);
+            this.label7.Location = new System.Drawing.Point(3, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(355, 31);
             this.label7.TabIndex = 6;
@@ -94,7 +94,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.uidTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.uidTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.uidTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.uidTextbox.Location = new System.Drawing.Point(111, 54);
+            this.uidTextbox.Location = new System.Drawing.Point(111, 55);
             this.uidTextbox.MaxLength = 10;
             this.uidTextbox.Name = "uidTextbox";
             this.uidTextbox.Size = new System.Drawing.Size(139, 24);
@@ -126,7 +126,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.nameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.nameTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.nameTextbox.Location = new System.Drawing.Point(45, 150);
+            this.nameTextbox.Location = new System.Drawing.Point(45, 154);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(271, 24);
             this.nameTextbox.TabIndex = 4;
@@ -161,12 +161,12 @@ namespace DigitalPokerChips_Registrierfenster
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.245623F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.20194F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.44344F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.22213F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.44344F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.44344F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.52464F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.20794F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.12873F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.13869F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(361, 281);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
@@ -182,11 +182,11 @@ namespace DigitalPokerChips_Registrierfenster
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.09718F));
             this.tableLayoutPanel2.Controls.Add(this.registrierButton, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.abbrechenButton, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 215);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 214);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(355, 63);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(355, 64);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
             // panel1
