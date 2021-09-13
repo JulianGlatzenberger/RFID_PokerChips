@@ -99,10 +99,12 @@ namespace DigitalPokerChips
         private void bookquery1()   //SQL Query für Aufbuchen
         {
             int anzahl = 0;
+            bool rechenArt = true;
             string uid = chipIdBox.Text;
+            string userName = "";
             string betrag = betragTextbox.Text;
             int betragInt = Int32.Parse(betrag);
-            string query1 = string.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';", uid);
+            string query1 = string.Format("SELECT Chip_Anzahl, Name FROM chipTable WHERE Chip_ID = '{0}';", uid);
 
             try
             {
@@ -116,6 +118,7 @@ namespace DigitalPokerChips
                 while (dataReader.Read())
                 {
                     anzahl = dataReader.GetInt32(0);
+                    userName = dataReader.GetString(1);
                 }
 
                 dataReader.Close();
@@ -134,16 +137,18 @@ namespace DigitalPokerChips
 
           
             bookOnChip(query);
-            showTransaktion(uid, betrag, anzahl);
+            showTransaktion(uid, betrag, anzahl, userName, rechenArt);
         }
 
         private void bookquery2()   //SQL Query für Abbuchen
         {
             int anzahl = 0;
+            bool rechenArt = false;
             string uid = chipIdBox.Text;
+            string userName = "";
             string betrag = betragTextbox.Text;
             int betragInt = Int32.Parse(betrag);
-            string query1 = string.Format("SELECT Chip_Anzahl FROM chipTable WHERE Chip_ID = '{0}';", uid);
+            string query1 = string.Format("SELECT Chip_Anzahl, Name FROM chipTable WHERE Chip_ID = '{0}';", uid);
 
             //Auslesen der Chips:
             try
@@ -158,6 +163,7 @@ namespace DigitalPokerChips
                 while (dataReader.Read())
                 {
                     anzahl = dataReader.GetInt32(0);
+                    userName = dataReader.GetString(1);
                 }
 
                 dataReader.Close();
@@ -180,10 +186,10 @@ namespace DigitalPokerChips
             string query = string.Format("UPDATE chipTable SET Chip_Anzahl = '{0}' WHERE Chip_ID = '{1}';", neuezahl, uid);
 
             bookOnChip(query);
-            showTransaktion(uid, betrag, anzahl);
+            showTransaktion(uid, betrag, anzahl, userName, rechenArt);
         }
 
-        private void showTransaktion(string ChipID, string betrag, int startAnzahl) //Anzeigen der letzten Buchungen in listView
+        private void showTransaktion(string ChipID, string betrag, int startAnzahl, string Name, bool vorzeichen) //Anzeigen der letzten Buchungen in listView
         {
             Random random = new Random();
             int num = random.Next(); 
@@ -192,10 +198,19 @@ namespace DigitalPokerChips
             DateTime dateTime = DateTime.Now;
             string date = dateTime.ToString("T");
  
-            ListViewItem lvItem = new ListViewItem(hexString);
+            ListViewItem lvItem = new ListViewItem(Name);
 
             lvItem.SubItems.Add(ChipID);
-            lvItem.SubItems.Add(betrag);
+
+            if(vorzeichen == true)
+            {
+                lvItem.SubItems.Add("+ " + betrag);
+            }
+            else if(vorzeichen != true) 
+            {
+                lvItem.SubItems.Add("- " + betrag);
+            }
+
             lvItem.SubItems.Add(startAnzahl.ToString());
             lvItem.SubItems.Add(date);
             listView1.Items.Add(lvItem);
@@ -281,7 +296,7 @@ namespace DigitalPokerChips
             string alteAnzahl = listView1.Items[0].SubItems[3].Text;
 
             DialogResult result = MessageBox.Show("Möchtest du die Buchung rückgangig machen?", "Achtung!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if(result == DialogResult.OK)
+            if(result == DialogResult.OK) // TODO: Rework
             {
                 resetBook(alteAnzahl, chipID);
                 chipIdBox.Text = chipID;
