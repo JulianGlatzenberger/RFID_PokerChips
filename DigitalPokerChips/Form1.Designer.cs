@@ -30,108 +30,44 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.standLable = new System.Windows.Forms.Label();
-            this.ausleseButton = new System.Windows.Forms.Button();
-            this.chipIdBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.betragTextbox = new System.Windows.Forms.TextBox();
             this.abbuchButton = new System.Windows.Forms.Button();
             this.aufbuchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.ausleseButton = new System.Windows.Forms.Button();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.standLable = new System.Windows.Forms.Label();
+            this.chipIdBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Transaktionsnummer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ChipID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Buchungsbetrag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Startanzahl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Uhrzeit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.abbrechenButton = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
+            resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.panel4);
             this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Controls.Add(this.abbrechenButton);
-            resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
-            // 
-            // panel4
-            // 
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.panel4.Controls.Add(this.nameLabel);
-            this.panel4.Controls.Add(this.standLable);
-            this.panel4.Controls.Add(this.ausleseButton);
-            this.panel4.Controls.Add(this.chipIdBox);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Name = "panel4";
-            // 
-            // nameLabel
-            // 
-            resources.ApplyResources(this.nameLabel, "nameLabel");
-            this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.nameLabel.Name = "nameLabel";
-            // 
-            // standLable
-            // 
-            resources.ApplyResources(this.standLable, "standLable");
-            this.standLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.standLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.standLable.Name = "standLable";
-            // 
-            // ausleseButton
-            // 
-            resources.ApplyResources(this.ausleseButton, "ausleseButton");
-            this.ausleseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.ausleseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.ausleseButton.Name = "ausleseButton";
-            this.ausleseButton.UseVisualStyleBackColor = false;
-            this.ausleseButton.Click += new System.EventHandler(this.ausleseButton_Click);
-            // 
-            // chipIdBox
-            // 
-            resources.ApplyResources(this.chipIdBox, "chipIdBox");
-            this.chipIdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.chipIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.chipIdBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.chipIdBox.Name = "chipIdBox";
-            this.chipIdBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chipIdBox_KeyPress);
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.label9.Name = "label9";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // panel2
-            // 
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.listView1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Name = "panel2";
             // 
             // panel1
             // 
@@ -180,6 +116,76 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
+            // panel4
+            // 
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.panel4.Controls.Add(this.ausleseButton);
+            this.panel4.Controls.Add(this.nameLabel);
+            this.panel4.Controls.Add(this.standLable);
+            this.panel4.Controls.Add(this.chipIdBox);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Name = "panel4";
+            // 
+            // ausleseButton
+            // 
+            resources.ApplyResources(this.ausleseButton, "ausleseButton");
+            this.ausleseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.ausleseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.ausleseButton.Name = "ausleseButton";
+            this.ausleseButton.UseVisualStyleBackColor = false;
+            this.ausleseButton.Click += new System.EventHandler(this.ausleseButton_Click);
+            // 
+            // nameLabel
+            // 
+            resources.ApplyResources(this.nameLabel, "nameLabel");
+            this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.nameLabel.Name = "nameLabel";
+            // 
+            // standLable
+            // 
+            resources.ApplyResources(this.standLable, "standLable");
+            this.standLable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.standLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.standLable.Name = "standLable";
+            // 
+            // chipIdBox
+            // 
+            resources.ApplyResources(this.chipIdBox, "chipIdBox");
+            this.chipIdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.chipIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chipIdBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.chipIdBox.Name = "chipIdBox";
+            this.chipIdBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chipIdBox_KeyPress);
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.label9.Name = "label9";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Name = "panel2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
+            this.label1.Name = "label1";
+            // 
             // listView1
             // 
             resources.ApplyResources(this.listView1, "listView1");
@@ -218,12 +224,6 @@
             // 
             resources.ApplyResources(this.Uhrzeit, "Uhrzeit");
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
-            this.label1.Name = "label1";
-            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
@@ -242,20 +242,20 @@
             // mainWindow
             // 
             this.AcceptButton = this.ausleseButton;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.CancelButton = this.abbrechenButton;
             this.Controls.Add(this.mainPanel);
             this.Name = "mainWindow";
             this.Load += new System.EventHandler(this.mainWindow_Load);
             this.mainPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

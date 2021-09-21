@@ -16,11 +16,14 @@ namespace DigitalPokerChips
     {
         SqlConnection sqlConnection;
         string connectionString = "Server=192.168.2.119,1433; Database=PokerChips; User Id=SA; Password=Server.123;";
+        int bookCounter = -1;
 
         public mainWindow()
         {
             InitializeComponent();
             chipIdBox.Select();
+
+            panel4.Update();
 
             sqlConnection = new SqlConnection(connectionString);
         }
@@ -81,7 +84,7 @@ namespace DigitalPokerChips
                 sqlCommand.ExecuteNonQuery();
                 sqlConnection.Close();
 
-                MessageBox.Show("Buchung erfolgreich!");
+                //MessageBox.Show("Buchung erfolgreich!");
             }
 
             catch (Exception E)
@@ -94,6 +97,7 @@ namespace DigitalPokerChips
             betragTextbox.Clear();
             chipIdBox.Clear();
             chipIdBox.Select();
+            
         }
 
         private void bookquery1()   //SQL Query für Aufbuchen
@@ -216,6 +220,7 @@ namespace DigitalPokerChips
             listView1.Items.Add(lvItem);
 
             label1.Hide();
+            bookCounter++;
         }
 
         private void resetBook(string anzahl, string chipId)    //Ausgewählte Buchung aus listView zurück buchen
@@ -292,8 +297,8 @@ namespace DigitalPokerChips
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            string chipID = listView1.Items[0].SubItems[1].Text; 
-            string alteAnzahl = listView1.Items[0].SubItems[3].Text;
+            string chipID = listView1.Items[bookCounter].SubItems[1].Text; 
+            string alteAnzahl = listView1.Items[bookCounter].SubItems[3].Text;
 
             DialogResult result = MessageBox.Show("Möchtest du die Buchung rückgangig machen?", "Achtung!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if(result == DialogResult.OK) // TODO: Rework
@@ -314,7 +319,7 @@ namespace DigitalPokerChips
             toolTip.SetToolTip(this.betragTextbox, "Eingabe des Betrags");
             toolTip.SetToolTip(this.aufbuchButton, "Eingegebenen Betrag addieren");
             toolTip.SetToolTip(this.abbuchButton, "Eingegebenen Betrag subtrahieren");
-            toolTip.SetToolTip(this.listView1, "Hier siehst du alle vergangenen Buchungen");
+            toolTip.SetToolTip(this.listView1, "Hier kannst du die letzte Buchung rückgängig machen");
             toolTip.SetToolTip(this.ausleseButton, "Auslesen der Anzahl an Chips");
 
         }
