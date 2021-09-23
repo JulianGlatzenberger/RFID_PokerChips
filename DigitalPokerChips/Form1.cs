@@ -15,7 +15,8 @@ namespace DigitalPokerChips
     public partial class mainWindow : Form //Codeoptimierung: Standartzugriff auf Datenbank in Methode
     {
         SqlConnection sqlConnection;
-        string connectionString = "Server=192.168.2.119,1433; Database=PokerChips; User Id=SA; Password=Server.123;";
+        //string connectionString = "Server=192.168.2.119,1433; Database=PokerChips; User Id=SA; Password=Server.123;";
+        string connectionString = "Server=192.168.2.115,63725; Database=PokerChips; User Id=NeuerBenutzer; Password=User1;";
         int bookCounter = -1;
 
         public mainWindow()
