@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("DigitalPokerChips_Registrierfenster")]
+[assembly: AssemblyTitle("PokerChips_Leaderboard")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DigitalPokerChips_Registrierfenster")]
+[assembly: AssemblyProduct("PokerChips_Leaderboard")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("fc62445f-ff56-4a45-b2d3-0d7c0c941768")]
+[assembly: Guid("38e8b567-c471-4a98-89eb-d2165e9ac707")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //

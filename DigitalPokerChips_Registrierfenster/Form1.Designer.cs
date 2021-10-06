@@ -57,7 +57,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.registrierButton.TabIndex = 8;
             this.registrierButton.Text = "Registrieren";
             this.registrierButton.UseVisualStyleBackColor = true;
-            this.registrierButton.Click += new System.EventHandler(this.registrierButton_Click);
+            this.registrierButton.Click += new System.EventHandler(this.RegistrierButton_Click);
             // 
             // label6
             // 
@@ -100,7 +100,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.uidTextbox.Size = new System.Drawing.Size(139, 24);
             this.uidTextbox.TabIndex = 3;
             this.uidTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.uidTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uidTextbox_KeyPress);
+            this.uidTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UidTextbox_KeyPress);
             // 
             // abbrechenButton
             // 
@@ -117,7 +117,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.abbrechenButton.TabIndex = 7;
             this.abbrechenButton.Text = "Abbrechen";
             this.abbrechenButton.UseVisualStyleBackColor = true;
-            this.abbrechenButton.Click += new System.EventHandler(this.abbrechenButton_Click);
+            this.abbrechenButton.Click += new System.EventHandler(this.AbbrechenButton_Click);
             // 
             // nameTextbox
             // 
@@ -130,7 +130,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(271, 24);
             this.nameTextbox.TabIndex = 4;
-            this.nameTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTextbox_KeyPress);
+            this.nameTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameTextbox_KeyPress);
             // 
             // registerPanel
             // 
@@ -214,6 +214,7 @@ namespace DigitalPokerChips_Registrierfenster
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
             this.Text = "DigitalPokerChips Registrierfenster";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

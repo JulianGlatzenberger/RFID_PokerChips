@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Configuration;
+using System.Windows.Forms;
 
 
 namespace DigitalPokerChips_Registrierfenster
@@ -17,86 +9,84 @@ namespace DigitalPokerChips_Registrierfenster
     {
         SqlConnection sqlConnection;
         //string connectionString = "Server=192.168.2.119,1433; Database=PokerChips; User Id=SA; Password=Server.123;";
-        string connectionString = "Server=192.168.2.115,63725; Database=PokerChips; User Id=NeuerBenutzer; Password=User1;";
+        string connectionString = "Server=localhost\\SQLEXPRESS; Database=PokerChips; User Id=NeuerBenutzer; Password=User1;";
 
         public Form1()
         {
             InitializeComponent();
-            sqlConnection = new SqlConnection(connectionString);
             uidTextbox.Select();
+
+            sqlConnection = new SqlConnection(connectionString);
+
+            try
+            {
+                sqlConnection.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
-        private void registerChip() // TODO: Nach Ausführung Textbox clear
+        private void RegisterChip()
         {
+            string chipAnzahl = "5000";
             string uid = uidTextbox.Text;
             string name = nameTextbox.Text;
-            int chipAnzahl = 5000;
-            string query = String.Format("SELECT COUNT(*) FROM chipTable WHERE Chip_ID = '{0}';", uid);
-            string query1 = String.Format("IF NOT EXISTS " +
-                "(SELECT 1 FROM chipTable WHERE Chip_ID = {0})" +
+            string query = "SELECT COUNT(*) FROM chipTable WHERE Chip_ID = @uID;";
+            string query1 = string.Format(("IF NOT EXISTS " +
+                "(SELECT 1 FROM chipTable WHERE Chip_ID = '{0}')" +
                 "BEGIN INSERT INTO chipTable (Chip_ID, Chip_Anzahl, Name) " +
-                "VALUES ('{1}', '{2}', '{3}') END;", uid, uid, chipAnzahl, name);
+                "VALUES ('{1}', '{2}', '{3}') END;"), uid, uid, chipAnzahl, name);
 
-            if (string.IsNullOrWhiteSpace(uid) || string.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(uidTextbox.Text) || string.IsNullOrWhiteSpace(nameTextbox.Text))
             {
                 MessageBox.Show("Keines der Felder darf leer sein!");
             }
-            else
+            using (sqlConnection = new SqlConnection(connectionString))
             {
-                try
+                sqlConnection.Open();
+                SqlCommand sqlcommand = new SqlCommand(query, sqlConnection);
+                sqlcommand.Parameters.AddWithValue("@uID", uid);
+
+                Int32 count = (Int32)sqlcommand.ExecuteScalar();
+
+
+                if (count == 0)
                 {
-                    using(SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
+                    SqlCommand command = new SqlCommand(query1, sqlConnection);
+           
+                    command.ExecuteNonQuery();
 
-                        using (SqlCommand command = new SqlCommand(query, connection))
-                        {                          
-                            Int32 count = (Int32)command.ExecuteScalar();
-                            connection.Close();
+                    MessageBox.Show(String.Format("Registrierung erfolgreich!" + Environment.NewLine + Environment.NewLine +
+                    "ChipID = {0}" + Environment.NewLine + "Name = {1}", uidTextbox.Text, nameTextbox.Text));
 
-                            if(count == 0)
-                            {
-                                using (SqlCommand command1 = new SqlCommand(query1, connection))
-                                {
-                                    connection.Open();
-                                    command1.ExecuteNonQuery();
-                                    connection.Close();
-
-                                    MessageBox.Show(String.Format("Registrierung erfolgreich!" + Environment.NewLine + Environment.NewLine +
-                                    "ChipID = {0}" + Environment.NewLine + "Name = {1}", uidTextbox.Text, nameTextbox.Text));
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Registrierung nicht erfolgreich!" + Environment.NewLine + Environment.NewLine + "Der Chip wurde bereits Registriert.");
-                            }
-                        }   
-                    }
-                    
-                    uidTextbox.Clear();
-                    nameTextbox.Clear();
-                    uidTextbox.Select();
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Registrierung nicht erfolgreich!" + Environment.NewLine + Environment.NewLine + "Der Chip wurde bereits Registriert.");
                 }
             }
+
+            sqlConnection.Close();
+            uidTextbox.Clear();
+            nameTextbox.Clear();
+            uidTextbox.Select();
         }
 
-        private void registrierButton_Click(object sender, EventArgs e)
-        {          
-            registerChip();    
+        private void RegistrierButton_Click(object sender, EventArgs e)
+        {
+            RegisterChip();
         }
 
-        private void abbrechenButton_Click(object sender, EventArgs e)
+        private void AbbrechenButton_Click(object sender, EventArgs e)
         {
             uidTextbox.Clear();
             nameTextbox.Clear();
             uidTextbox.Select();
         }
 
-        private void uidTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        private void UidTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar == '0')
             {
@@ -109,12 +99,18 @@ namespace DigitalPokerChips_Registrierfenster
             }
         }
 
-        private void nameTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        private void NameTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)
             {
-                registerChip();
+                RegisterChip();
             }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //sqlConnection.Close();
+            //sqlConnection.Dispose();
         }
     }
 }
