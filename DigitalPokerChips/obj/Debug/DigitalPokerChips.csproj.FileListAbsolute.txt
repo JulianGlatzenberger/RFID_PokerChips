@@ -11,3 +11,16 @@ E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\bin\Debug\de\DigitalPoke
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.mainWindow.de.resources
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\de\DigitalPokerChips.resources.dll
 E:\Programming\GitHub\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.csproj.AssemblyReference.cache
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\bin\Debug\DigitalPokerChips.exe.config
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\bin\Debug\DigitalPokerChips.exe
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\bin\Debug\DigitalPokerChips.pdb
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\bin\Debug\de\DigitalPokerChips.resources.dll
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.csprojAssemblyReference.cache
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.mainWindow.resources
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.Properties.Resources.resources
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.mainWindow.de.resources
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.csproj.GenerateResource.cache
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.csproj.CoreCompileInputs.cache
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\de\DigitalPokerChips.resources.dll
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.exe
+E:\Programmieren\RFID_PokerChips\DigitalPokerChips\obj\Debug\DigitalPokerChips.pdb

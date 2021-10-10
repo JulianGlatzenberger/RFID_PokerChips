@@ -6,3 +6,13 @@ E:\Programming\GitHub\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChip
 E:\Programming\GitHub\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.csproj.CoreCompileInputs.cache
 E:\Programming\GitHub\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.exe
 E:\Programming\GitHub\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.pdb
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\bin\Debug\PokerChips_Leaderboard.exe.config
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\bin\Debug\PokerChips_Leaderboard.exe
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\bin\Debug\PokerChips_Leaderboard.pdb
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.csprojAssemblyReference.cache
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.Leaderboard.resources
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.Properties.Resources.resources
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.csproj.GenerateResource.cache
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.csproj.CoreCompileInputs.cache
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.exe
+E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.pdb

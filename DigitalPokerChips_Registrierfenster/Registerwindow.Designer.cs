@@ -1,7 +1,7 @@
 ﻿
 namespace DigitalPokerChips_Registrierfenster
 {
-    partial class Form1
+    partial class Registerwindow
     {
         /// <summary>
         /// Erforderliche Designervariable.

@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace DigitalPokerChips_Registrierfenster
 {
-    public partial class Form1 : Form
+    public partial class Registerwindow : Form
     {
         SqlConnection sqlConnection;
         //string connectionString = "Server=192.168.2.119,1433; Database=PokerChips; User Id=SA; Password=Server.123;";
-        string connectionString = "Server=localhost\\SQLEXPRESS; Database=PokerChips; User Id=NeuerBenutzer; Password=User1;";
+        string connectionString = "Server=192.168.2.115,63725; Database=PokerChips; User Id=NeuerBenutzer; Password=User1;";
 
-        public Form1()
+        public Registerwindow()
         {
             InitializeComponent();
             uidTextbox.Select();

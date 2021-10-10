@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalPokerChips", "DigitalPokerChips.csproj", "{F0F6B070-0605-4A38-944B-51CFFD97F8F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalPokerChips_Registrierfenster", "..\DigitalPokerChips_Registrierfenster\DigitalPokerChips_Registrierfenster.csproj", "{FC62445F-FF56-4A45-B2D3-0D7C0C941768}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalPokerChips_Registerwindow", "..\DigitalPokerChips_Registrierfenster\DigitalPokerChips_Registerwindow.csproj", "{FC62445F-FF56-4A45-B2D3-0D7C0C941768}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerChips_Leaderboard", "..\PokerChips_Leaderboard\PokerChips_Leaderboard.csproj", "{38E8B567-C471-4A98-89EB-D2165E9AC707}"
 EndProject
