@@ -16,3 +16,5 @@ E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Lea
 E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.csproj.CoreCompileInputs.cache
 E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.exe
 E:\Programmieren\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.pdb
+E:\Programming\GitHub\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.csproj.AssemblyReference.cache
+E:\Programming\GitHub\RFID_PokerChips\PokerChips_Leaderboard\obj\Debug\PokerChips_Leaderboard.Leaderboard.resources

@@ -15,6 +15,8 @@ namespace PokerChips_Leaderboard
     {
         SqlConnection sqlConnection;
         string connectionString = "Server=192.168.2.115,63725; Database=PokerChips; User Id=NeuerBenutzer; Password=User1;";
+        string name;
+        string chip_Anzahl;
 
         public Leaderboard()
         {
@@ -24,9 +26,7 @@ namespace PokerChips_Leaderboard
 
         private void ShowTop5()
         {
-            string query = "SELECT top 5 Chip_Anzahl FROM chipTable ORDER BY Chip_Anzahl DESC";
-            string name = "";
-            int chip_Anzahl = 0;
+            string query = "SELECT top 5 Chip_Anzahl, Name FROM chipTable ORDER BY Chip_Anzahl DESC";
 
             using (sqlConnection = new SqlConnection(connectionString))
             {
@@ -35,13 +35,22 @@ namespace PokerChips_Leaderboard
 
                 SqlDataReader reader = sqlCommand.ExecuteReader();
 
-                while(reader.Read())
+                do
                 {
-                    chip_Anzahl = reader.GetInt32(0);
-                }
-                reader.Close();
+                    while (reader.Read())
+                    {
+                        chip_Anzahl = reader.GetInt32(0).ToString();
+                        name = reader.GetString(1);
+
+                        ListViewItem lvItem = new ListViewItem(chip_Anzahl);
+                        lvItem.SubItems.Add(name);
+                        listView1.Items.Add(lvItem);
+                    }             
+                } 
+                while (reader.NextResult());
             }
-            MessageBox.Show(chip_Anzahl.ToString());
+
+            
 
         }
     }

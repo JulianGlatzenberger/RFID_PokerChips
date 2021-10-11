@@ -36,10 +36,13 @@ namespace PokerChips_Leaderboard
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(74)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chipHeader,
             this.nameHeader});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(221)))), ((int)(((byte)(218)))));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(19, 14);
@@ -53,12 +56,12 @@ namespace PokerChips_Leaderboard
             // chipHeader
             // 
             this.chipHeader.Text = "Chip Anzahl";
-            this.chipHeader.Width = 99;
+            this.chipHeader.Width = 132;
             // 
             // nameHeader
             // 
             this.nameHeader.Text = "Name";
-            this.nameHeader.Width = 247;
+            this.nameHeader.Width = 382;
             // 
             // Leaderboard
             // 
@@ -68,7 +71,8 @@ namespace PokerChips_Leaderboard
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listView1);
             this.Name = "Leaderboard";
-            this.Text = "Form1";
+            this.Text = "PokerChips_Leaderboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
