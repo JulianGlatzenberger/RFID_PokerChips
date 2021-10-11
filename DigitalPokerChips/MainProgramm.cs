@@ -324,6 +324,5 @@ namespace DigitalPokerChips
             toolTip.SetToolTip(this.ausleseButton, "Auslesen der Anzahl an Chips");
 
         }
-
     }      
 }
