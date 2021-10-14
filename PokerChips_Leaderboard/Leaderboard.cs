@@ -14,7 +14,8 @@ namespace PokerChips_Leaderboard
     public partial class Leaderboard : Form
     {
         SqlConnection sqlConnection;
-        string connectionString = "Server=192.168.2.115,63725; Database=PokerChips; User Id=NeuerBenutzer; Password=User1;";
+        //string connectionString = "Server=192.168.2.115,63725; Database=PokerChips; User Id=NeuerBenutzer; Password=User1;";
+         string connectionString = "Server=10.105.1.191,1433; Database=PokerChips; User Id=CasinoDealer; Password=PokerAbend.15;";
         string name;
         string chip_Anzahl;
 
