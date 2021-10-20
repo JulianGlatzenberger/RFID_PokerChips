@@ -23,11 +23,12 @@ namespace PokerChips_Leaderboard
         {
             InitializeComponent();
             ShowTop5();
+            timer1.Start();
         }
 
         private void ShowTop5()
         {
-            string query = "SELECT top 5 Chip_Anzahl, Name FROM chipTable ORDER BY Chip_Anzahl DESC";
+            string query = "SELECT top 10 Chip_Anzahl, Name FROM chipTable ORDER BY Chip_Anzahl DESC";
 
             using (sqlConnection = new SqlConnection(connectionString))
             {
@@ -42,17 +43,30 @@ namespace PokerChips_Leaderboard
                     {
                         chip_Anzahl = reader.GetInt32(0).ToString();
                         name = reader.GetString(1);
+                        
+                            ListViewItem lvItem = new ListViewItem();
+                            lvItem.SubItems.Add(chip_Anzahl);
+                            lvItem.SubItems.Add(name);
+                            this.listView1.Items.Add(lvItem);
 
-                        ListViewItem lvItem = new ListViewItem(chip_Anzahl);
-                        lvItem.SubItems.Add(name);
-                        listView1.Items.Add(lvItem);
+                        
+                        
+
+
+
+
+
                     }             
                 } 
                 while (reader.NextResult());
             }
 
-            
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            ShowTop5();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace DigitalPokerChips_Registrierfenster
 
         private void RegisterChip()
         {
-            string chipAnzahl = "5000";
+            string chipAnzahl = "3000";
             string uid = uidTextbox.Text;
             string name = nameTextbox.Text;
             string query = "SELECT COUNT(*) FROM chipTable WHERE Chip_ID = @uID;";
